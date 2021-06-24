@@ -73,64 +73,6 @@
           inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
       }
 
-      .bi {
-        vertical-align: -0.125em;
-        fill: currentColor;
-      }
-
-      .feature-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: centeGHKatender;
-        width: 4rem;
-        height: 4rem;
-        margin-bottom: 1rem;
-        font-size: 2rem;
-        color: #fff;
-        border-radius: 0.75rem;
-      }
-
-      .icon-link {
-        display: inline-flex;
-        align-items: center;
-      }
-      .icon-link > .bi {
-        margin-top: 0.125rem;
-        margin-left: 0.125rem;
-        transition: transform 0.25s ease-in-out;
-        fill: currentColor;
-      }
-      .icon-link:hover > .bi {
-        transform: translate(0.25rem);
-      }
-
-      .icon-square {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 3rem;
-        height: 3rem;
-        font-size: 1.5rem;
-        border-radius: 0.75rem;
-      }
-
-      .rounded-4 {
-        border-radius: 0.5rem;
-      }
-      .rounded-5 {
-        border-radius: 1rem;
-      }
-
-      .text-shadow-1 {
-        text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
-      }
-      .text-shadow-2 {
-        text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
-      }
-      .text-shadow-3 {
-        text-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
-      }
-
       .card-cover {
         background-repeat: no-repeat;
         background-position: center center;
@@ -176,6 +118,74 @@
    .collapse  .nav-link {
       font-weight: bold;
       color:#f1f1f1 !important;
+      transition: all .3s ;
+    }
+
+    .collapse  .nav-link:hover {
+       color:rgb(24, 168, 32);
+    }
+
+    .onMobile {
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      border: 5px solid #f1f1f1;
+    }
+
+    .moboImgbox{
+      display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .notCenter i {
+        margin-right: 10px;
+      }
+
+    .contactInfo{
+      width: 80%;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+      background-color: #198754 !important;
+    }
+
+    @media only screen and (max-width: 700px) {
+      body {
+          background-color: #f1f1f1;
+      }
+
+      .onMobile {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 5px solid #f1f1f1;
+      }
+      .mobo{
+        text-align: center;
+      }
+
+      .moboImgbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .notCenter{
+        text-align: left;
+        margin: 20px auto;
+      }
+
+      .notCenter div {
+        margin: 10px auto;
+      }
+
+      .notCenter i {
+        margin-right: 10px;
+      }
+
+      .contactInfo{
+      width: 100%;
+    }
     }
     </style>
   </head>
@@ -239,24 +249,19 @@
         "
       >
         <div class="container col-xxl-8 px-4 py-5">
-          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5 mobo">
             <div
-              class="col-10 col-sm-8 col-lg-6 flex justify-center items-center"
+              class="col-lg-6 moboImgbox" 
             >
               <img
                 src="./images/ghk.png"
-                alt=""
-                style="
-                  height: 300px;
-                  width: 300px;
-                  border-radius: 50%;
-                  border: 5px solid #fff;
-                "
+                alt="GHKatende"
+                class="onMobile"
               />
             </div>
             <div class="col-lg-6">
               <h3 class="display-6 fw-bold lh-1 mb-3">Hello, I am</h3>
-              <h1 class="display-4 fw-bold lh-1 mb-3 text-blue-200">
+              <h1 class="display-4 fw-bold lh-1 mb-3 text-green-200">
                 G . Hakim Katende
               </h1>
               <h5 class="h3" style="font-family: 'Benne', serif">
@@ -265,9 +270,9 @@
               </h5>
               <p>This site hosts a variety of things <b>professional</b> and <b>Personal</b>;  about <b>who I am</b>, why I <b>love what I do</b>.</p>
               <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-8">
-                <button type="button" class="btn btn-primary btn-lg px-4">
+                <a href="#contact" class="btn btn-success btn-lg px-4">
                   Hire Me
-                </button>
+                </a>
                 <a target="_blank" href="/images/hakimKatendeCV.docx" class="btn btn-light btn-lg px-4">
                   DownLoad CV
                 </a>
@@ -278,18 +283,19 @@
       </div>
       <section class="about" id="about">
         <div  class="container">
-          <div>
+          <div class="mobo">
             <h2 class="display-4 fw-bold lh-1 mb-3">About Me</h2>
           </div>
           <div class="row">
             <div class="col-md-6 text-center" style="position: relative">
               <img
                 src="./images/ivan1.jpg"
-                style="width: 70%; height: auto; margin:0 auto"
+                style="width: 70%; height: auto; margin:20px auto"
                 class="shadow-lg"
               />
             </div>
             <div class="col-md-6">
+              <div style="height: 20px;"></div>
               <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button
@@ -451,36 +457,36 @@
                   I'm Social, <br />
                   Let's connect
                 </h2>
-                <p>
+                <p class="contactInfo">
                   This site is host to a variety of things professional and
                   personal; you can learn more about who I am, why I love what
-                  I do, I have lots of ideas, if you have any questions, you
+                  I do, I have lots of ideas,  if you have any questions, you
                   can contact me via e-mail.
                 </p>
                 <br />
-                <div class="row text-center">
+                <div class="row notCenter" >
                   <div class="col-md-4 col-sm-4 col-xs-4">
                     <i
                       class="fas fa-envelope-open-text"
-                      style="font-size: 30px; color: #555"
+                      style="font-size: 16px; color: #555"
                     ></i
-                    ><br />
+                    >
                     <b><small>ghkatende @ gmail [.] com</small> </b>
                   </div>
                   <div class="col-md-4 col-sm-4 col-xs-4">
                     <i
                       class="fas fa-blender-phone"
-                      style="font-size: 30px; color: #555"
+                      style="font-size: 16px; color: #555"
                     ></i
-                    ><br />
+                    >
                     <b><small>(+256) - 788127712</small> </b>
                   </div>
                   <div class="col-md-4 col-sm-4 col-xs-4">
                     <i
                       class="fas fa-street-view"
-                      style="font-size: 30px; color: #555"
+                      style="font-size: 16px; color: #555"
                     ></i
-                    ><br />
+                    >
                     <b><small>Kampala, (UG)</small></b>
                   </div>
                 </div>
@@ -509,7 +515,7 @@
                   </div>
                   <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label"
-                      >Example textarea</label
+                      >message</label
                     >
                     <textarea
                       class="form-control"
@@ -519,7 +525,7 @@
                   </div>
 
                   <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3">
+                    <button type="submit" class="btn btn-success mb-3">
                       Send Message
                     </button>
                   </div>
@@ -641,7 +647,6 @@
           </div>`;
         html += innerHtml;
       });
-
       document.querySelector("#allprojects").innerHTML = html;
     </script>
   </body>
