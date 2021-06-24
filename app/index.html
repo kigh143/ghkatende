@@ -4,7 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ghkatende</title>
+
+
+    <meta name="description" content="Hakim Katende, A web and mobile Developer. I'm very passionate and dedicated to my work.">
+    <meta name="author" content="Hakim Katende">
+    <meta name="generator" content="Hugo 0.80.0">
+
+    <link rel="apple-touch-icon" href="/app/images/logo.png" sizes="180x180">
+	<link rel="icon" href="/app/images/logo.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/app/images/logo.png" sizes="16x16" type="image/png">
+	<link rel="manifest" href="https://withfarmers.com/images/ico/manifest.json">
+	<link rel="icon" href="/app/images/logo.png">
+
+    <link rel="icon" type="image/png" href="/app/images/logo.png"/>
+    <title>GHKatende</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,6 +37,15 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Benne&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://use.fontawesome.com/2da689b80a.js"></script>
     <link rel="stylesheet" href="style.css" />
     <style>
       body {
@@ -118,7 +140,10 @@
 
       section {
         min-height: 100vh;
-        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        /* padding-top: 50px; */
       }
 
       section .row {
@@ -128,11 +153,12 @@
       footer {
         padding: 20px;
       }
+    /* @mediaquery  */
 
-      .about {
-        min-height: 90vh;
-        margin-top: 57px;
-      }
+    .badge{
+      padding: 15px;
+      margin: 10px;
+    }
     </style>
   </head>
   <body>
@@ -171,14 +197,29 @@
               </li>
             </ul>
             <form class="d-flex" style="margin-left: 20px">
-              <a href="#contact" class="btn btn-success">Lets talk</a>
+              <a href="#contact" class="btn btn-success">
+                I'm Social, Let's connect</a
+              >
             </form>
           </div>
         </div>
       </nav>
     </header>
     <div data-bs-spy="scroll">
-      <div class="bg-gray-700 text-white" id="hero">
+      <div
+        class="bg-gray-700 text-white"
+        id="hero"
+        style="
+          background: linear-gradient(#050505ab, #020202b2),
+            url('/app/images/bgnew.jpg');
+          min-height: 90vh;
+          background-size: cover;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          backdrop-filter: blur(3rem);
+        "
+      >
         <div class="container col-xxl-8 px-4 py-5">
           <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div
@@ -196,50 +237,41 @@
               />
             </div>
             <div class="col-lg-6">
-              <h3 class="display-4 fw-bold lh-1 mb-3">Hello, I am</h3>
-              <h1 class="display-2 fw-bold lh-1 mb-3 text-blue-200">
-                G. Hakim Katende
+              <h3 class="display-6 fw-bold lh-1 mb-3">Hello, I am</h3>
+              <h1 class="display-4 fw-bold lh-1 mb-3 text-blue-200">
+                G . Hakim Katende
               </h1>
-              <h3 class="display-6">
-                A Web and Mobile Developer. I'm very passionate and dedicated to
+              <h5 class="h3" style="font-family: 'Benne', serif">
+                A web and mobile Developer. I'm very passionate and dedicated to
                 my work.
-              </h3>
+              </h5>
+              <p>This site is hosts a variety of things <b>professional</b> and <b>Personal</b>;  about <b>who I am</b>, why I <b>love what I do</b>.</p>
               <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-8">
                 <button type="button" class="btn btn-primary btn-lg px-4">
                   Hire Me
                 </button>
+                <a href="/app/images/hakimKatendeCV.docx" class="btn btn-light btn-lg px-4">
+                  DownLoad CV
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
       <section class="about" id="about">
-        <div class="container">
+        <div  class="container">
           <div>
             <h2 class="display-4 fw-bold lh-1 mb-3">About Me</h2>
           </div>
           <div class="row">
-            <div class="col-md-6" style="position: relative">
+            <div class="col-md-6 text-center" style="position: relative">
               <img
                 src="./images/ivan1.jpg"
-                style="width: 70%; height: auto"
+                style="width: 70%; height: auto; margin:0 auto"
                 class="shadow-lg"
               />
-              <div
-                style="
-                  position: absolute;
-                  z-index: -2;
-                  height: 90%;
-                  width: 70%;
-                  top: 15%;
-                  left: 15%;
-                "
-                class="shadow-md bg-blue-200"
-              ></div>
-              <br />
             </div>
             <div class="col-md-6">
-              <div style="height: 20%"></div>
               <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button
@@ -293,24 +325,26 @@
                   aria-labelledby="pills-home-tab"
                 >
                   <p>
-                    My name is Katende Hakim. I am a Web and Mobile Developer,
-                    and I'm very passionate and dedicated to my work. With 3
-                    years experience as a professional Web and Mobile developer,
-                    I have acquired the skills and knowledge necessary to make
+                    My name is Katende Hakim, a Web and Mobile Developer. I'm
+                    very passionate and dedicated to my work. With
+                    <b>3 years experience as a professional</b> developer, I
+                    have acquired the skills and knowledge necessary to make
                     your project a success. I enjoy every step of the design
                     process, from discussion and collaboration.
                   </p>
                   <br />
                   <p>
-                    I’m a professional software developer with experience
-                    developing software solutions in different business domains.
-                    I love detailed software requirements but can also work
-                    comfortably in an agile environment with the ability to
-                    communicate directly with product managers, designers, and
-                    other developers. I look forward to utilizing the knowledge
-                    that I have gathered over years to help customers build
-                    software products for an even more successful
-                    implementation.
+                    I love detailed software requirements but can also
+                    <b>work comfortably in an agile environment </b> with the
+                    ability to communicate directly with product managers,
+                    designers, and other developers.
+                  </p>
+                  <br />
+
+                  <p>
+                    I look forward to utilizing the knowledge that I have
+                    gathered over years to help customers build software
+                    products for an even more successful implementation.
                   </p>
                 </div>
                 <div
@@ -319,37 +353,55 @@
                   role="tabpanel"
                   aria-labelledby="pills-profile-tab"
                 >
-                  <p className="card-text">
+                  <p>
                     I've interacted with many web and mobile apps in different
-                    industries and verticals. As a growing developer I decided
+                    industries and verticals.</p> <br/>
+                    
+                    <p>As a growing developer I decided
                     that it would be a fun challenge to try designing and
-                    building my own and also develope software solving problems
-                    of people around me in my free time. If you want to work
-                    with me please send me a text.
+                    building my own. By doing this, I hope to  solve problems for people around me.
+                    <a href="#contact"></a>
+                      <b
+                        >Want to be part of it? join me.</b
+                      ></a>
                   </p>
                   <br />
                   <p>
-                    This site is host to a variety of things professional and
-                    personal; you can learn more about who I am, why I love what
-                    I do, I have lots of ideas, if you have any questions, you
-                    can contact me via e-mail.
-                  </p>
-                  <br />
-                  <p>
-                    <b>ghkatende @ gmail . com</b> <br />
+                    E-mail at <b>ghkatende @ gmail [.] com</b> 
                     or send a message through my contact form [ the fastest way
-                    to connect me.]
+                    to connect me].
                   </p>
                 </div>
                 <div
-                  class="tab-pane fade"
+                  class="tab-pane fade pl-5 pt-3"
                   id="pills-contact"
                   role="tabpanel"
                   aria-labelledby="pills-contact-tab"
                 >
-                  <p className="card-text">
-                    I work as a Front end engineer at Danapay, I work to improve
-                    the experience of mobile Applications.
+                  <p>
+                    I currently work as a remote  Full stack engineer, Working on both website and Mobile application in different domain with Danapay and Ultiro.
+                  </p>
+                  <br/>
+                  <p> <b>Always Tooling </b></p>
+                  <p> I am currently pursuing the coding challenges on
+                    <b>Free Code Camp</b> and <b>CodeWars</b> to take my coding knowledge from current
+                    level to a very confident level</p> <br/>
+
+                  <p></p><br/>
+                  <p class="text-center">
+                    <span class="badge rounded-pill bg-primary">React native</span>
+                    <span class="badge rounded-pill bg-light text-dark"> React JS</span>
+                    <span class="badge rounded-pill bg-secondary">PHP</span>
+                    <span class="badge rounded-pill bg-warning text-dark">HTMl</span>
+                    <span class="badge rounded-pill bg-success">CSS</span>
+                    <span class="badge rounded-pill bg-warning text-dark">MySQL</span>
+                    <span class="badge rounded-pill bg-success">Node Js</span>
+                    <span class="badge rounded-pill bg-dark">Mongo DB</span>
+                    <span class="badge rounded-pill bg-danger">Javascript</span>
+                    <span class="badge rounded-pill bg-warning text-dark">Firebase</span>
+                    <span class="badge rounded-pill bg-info text-dark">CircleCI & Fastlane</span>
+                    <span class="badge rounded-pill bg-light text-dark">Git</span>
+                    <span class="badge rounded-pill bg-dark">Angular</span>
                   </p>
                 </div>
               </div>
@@ -372,15 +424,43 @@
           <div class="container col-xl-10 col-xxl-8 px-4 py-5">
             <div class="row align-items-center g-lg-5 py-5">
               <div class="col-lg-7 text-center text-lg-start">
-                <h2 class="display-4 fw-bold lh-1 mb-3">Let's Talk</h2>
-                <p class="col-lg-10 fs-4">
-                  If you’d like to get in touch with me, whether to hire me,
-                  request additional contact information, or just to say hi.
+                <h2 class="display-4 fw-bold lh-1 mb-3">
+                  I'm Social, <br />
+                  Let's connect
+                </h2>
+                <p>
+                  This site is host to a variety of things professional and
+                  personal; you can learn more about who I am, why I love what
+                  I do, I have lots of ideas, if you have any questions, you
+                  can contact me via e-mail.
                 </p>
                 <br />
-                <p class="col-lg-10 fs-4">Email: <b>ghkatende@gmail.com </b></p>
-                <p class="col-lg-10 fs-4">Phone: <b>+256788127712</b></p>
-                <p class="col-lg-10 fs-4">Location: <b>Uganda (Africa)</b></p>
+                <div class="row text-center">
+                  <div class="col-md-4 col-sm-4 col-xs-4">
+                    <i
+                      class="fas fa-envelope-open-text"
+                      style="font-size: 30px; color: #555"
+                    ></i
+                    ><br />
+                    <b><small>ghkatende @ gmail [.] com</small> </b>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-4">
+                    <i
+                      class="fas fa-blender-phone"
+                      style="font-size: 30px; color: #555"
+                    ></i
+                    ><br />
+                    <b><small>(+256) - 788127712</small> </b>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-4">
+                    <i
+                      class="fas fa-street-view"
+                      style="font-size: 30px; color: #555"
+                    ></i
+                    ><br />
+                    <b><small>Kampala, (UG)</small></b>
+                  </div>
+                </div>
               </div>
               <div class="col-md-10 mx-auto col-lg-5">
                 <form class="p-4 p-md-5 border rounded-3 bg-light">
