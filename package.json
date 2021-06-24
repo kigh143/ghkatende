@@ -6,7 +6,7 @@
   "author": "kigh143 <ghkatende@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build:css": "tailwind build src/style.css -o dist/style.css"
+    "build:css": "tailwind build src/style.css -o app/style.css"
   },
   "dependencies": {
     "tailwindcss": "^2.2.2"
