@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gsap</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .div1,
+      .div2 {
+        height: 100vh;
+      }
+
+      .div1 {
+        height: 100vh;
+        background-color: aqua;
+      }
+
+      .div2 {
+        background-color: blue;
+      }
+
+      .square {
+        width: 150px;
+        background-color: azure;
+        height: 150px;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .box-red {
+        background-color: red;
+      }
+      .box {
+        width: 100px;
+        background-color: blue;
+        height: 100px;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+
+      .panel {
+        height: 100vh;
+        background-color: green;
+      }
+      .panel1 {
+        height: 100vh;
+        background-color: red;
+      }
+      .panel2 {
+        height: 100vh;
+        background-color: orange;
+      }
+      .container {
+        height: 40vh;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="div1"></div>
+    <div class="div2">
+      <div class="square"></div>
+      <div class="square2"></div>
+    </div> -->element
+
+    <div class="container">black</div>
+    <div class="panel">panel</div>
+    <div class="panel panel1">panel1</div>
+    <div class="panel panel2">panel2</div>
+    <div class="div1">div1</div>
+    <div class="div1">div1</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      //   gsap.to(".square", {
+      //     // x: 100,
+      //     duration: 3,
+      //     // scrollTrigger: ".square2",
+      //     scrollTrigger: {
+      //       trigger: ".square",
+      //       //   start: 400,
+      //       //   end: "center 20%",
+      //       end: () => `+=${document.querySelector(".square").offsetHeight}`,
+      //       start: "top 30%",
+      //       //   markers: {
+      //       //     startColor: "red",
+      //       //     endColor: "yellow",
+      //       //     fontSize: "2rem",
+      //       //     indent: 200,
+      //       //   },
+      //       markers: true,
+      //       toggleClass: "red",
+      //     },
+      //   });
+
+      //   gsap.to(".square", {
+      //     x: 700,
+      //     duration: 8,
+      //     scrollTrigger: {
+      //       trigger: ".square",
+      //       start: "top 60%",
+      //       end: "top 20%",
+      //       start: "top 70%",
+      //       scrub: 4,
+      //       toggleActions: "play pause resume reverse",
+      //       markers: {
+      //         startColor: "red",
+      //         endColor: "yellow",
+      //         fontSize: ".9rem",
+      //         indent: 20,
+      //       },
+      //     },
+      //   });
+
+      //   const tl = gsap.timeline({
+      //     scrollTrigger: {
+      //       trigger: ".box",
+      //       markers: true,
+      //       start: "top 80%",
+      //       end: "top 30%",
+      //       scrub: 1,
+      //     },
+      //   });
+
+      //   tl.to(".box", { x: 500, duration: 5 })
+      //     .to(".box", { y: 200, duration: 3 })
+      //     .to(".box", { x: 0, duration: 2 });
+
+      //   ScrollTrigger.create({
+      //     trigger: ".box",
+      //     start: "top 50%",
+      //     end: "top 10%",
+      //     markers: true,
+      //     toggleClass: "red",
+      //     // onEnter: () => alert("onEnter"),
+      //     // onLeave: () => alert("onLeave"),
+      //     // onEnterBack: () => alert("onEnterBack"),
+      //     // onLeaveBack: () => alert("onLeaveBack"),
+      //     onUpdate: (self) => console.log(self),
+      //   });
+      //   gsap.defaults({ ease: "none", duration: 2 });
+      //   const timeline = gsap.timeline();
+
+      //   timeline
+      //     .from(".panel", { xPercent: -100 })
+      //     .from(".panel1", { xPercent: 100 })
+      //     .from(".panel2", { yPercent: -100 });
+
+      //   ScrollTrigger.create({
+      //     animation: timeline,
+      //     trigger: ".container",
+      //     start: "top top",
+      //     end: "+=4000",
+      //     scrub: true,
+      //     pin: true,
+      //     anticipatePin: 1,
+      //   });
+
+      //   ScrollTrigger.create({
+      //     trigger: ".container",
+      //     start: "top top",
+      //     end: "+=300",
+      //     pin: true,
+      //     pinSpacing: false,
+      //   });
+
+      gsap.utils.toArray(".panel").forEach((element, index) => {
+        ScrollTrigger.create({
+          trigger: element,
+          start: "top top",
+          pin: true,
+          pinSpacing: false,
+        });
+      });
+    </script>
+  </body>
+</html>
