@@ -95,8 +95,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    backdrop-filter: blur(3rem);
+    backdrop-filter: blur(5rem);
 }
+
+#hero2{
+  background: linear-gradient(#050505ab, #020202b2),
+  url('/images/retooling.jpg');
+  min-height: 90vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(5rem);
+}
+
 
 .aboutImg{
   width: 70%; height: auto; margin:20px auto
@@ -178,4 +190,9 @@ section .mobo{
     flex-direction: column;
     min-height: 100vh;
  }
+}
+
+
+.service{
+  background-color: #fff;
 }

@@ -76,7 +76,7 @@ var projects_collection = [
     type: "Personal",
     role: "Front End Dev",
     technologies: "React Js, Tailwind CSS, ",
-    image: "./images/projects/keeptabs.jpg",
+    image: "./images/projects/keeptabs.png",
     description:
       "An offline digital wallet for all your bank cards. There is no need to carry your cards everywhere if you are not going to use them. Add them to Mi-Cards for easy access. ",
     link: "https://play.google.com/store/apps/details?id=com.micards",
@@ -92,7 +92,11 @@ projects_collection.forEach((element, index) => {
   }; color:${element.textColor};" class="py-2">
               <div class="container col-xxl-8 px-4">
                   <div class="mobo">
-                  <h2>Project ${index + 1}</h2>
+                  <b style="color:${
+                    element.textColor
+                  }; text-transform:uppercase; font-size:15px;">Project ${
+    index + 1
+  }</b>
                   </div>
                   <div class="row flex-lg-row-reverse align-items-center g-5">
                       <div class="col-lg-6">
@@ -112,8 +116,12 @@ projects_collection.forEach((element, index) => {
                           <p class="lead">${element.description}</p> <br/>
                           <p class="lead">${element.technologies}</p>
                           <div class="d-grid gap-2 d-md-flex justify-content-md-start pt-6">
-                          <button type="button" class="btn btn-success btn-lg px-4 me-md-2">Source Code</button>
-                          <button type="button" class="btn btn-light btn-lg px-4">Demo Project</button>
+                          <a href="${
+                            element.github
+                          }" class="btn btn-success btn-lg px-4 me-md-2" target="_blank">Source Code</a>
+                          <a href="${
+                            element.link
+                          }" class="btn btn-light btn-lg px-4" target="_blank">Demo Project</a>
                           </div>
                       </div>
                   </div>
