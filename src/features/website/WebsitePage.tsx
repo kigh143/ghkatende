@@ -1,8 +1,14 @@
 import React from "react";
 import "./website.css";
 import bg from "./images/bg.jpg";
+import { useAppSelector } from "../../app/hooks";
 
 const WebsitePage: React.FC = () => {
+  const projects = useAppSelector(
+    (state) => state.persistedReducer.website.projects
+  );
+
+  console.log(projects);
   return (
     <div>
       <header>
@@ -427,7 +433,66 @@ const WebsitePage: React.FC = () => {
           </div>
         </section>
 
-        <div id="casestudy"></div>
+        <div id="casestudy">
+          {projects &&
+            projects.map((project, index) => (
+              <section
+                id="project"
+                style={{ background: project.color, color: project.textColor }}
+                className="py-2"
+              >
+                <div className="container col-xxl-8 px-4">
+                  <div className="mobo">
+                    <b
+                      style={{
+                        color: project.textColor,
+                        textTransform: "uppercase",
+                        fontSize: 15,
+                      }}
+                    >
+                      Project {index + 1}
+                    </b>
+                  </div>
+                  <div className="row flex-lg-row-reverse align-items-center g-5">
+                    <div className="col-lg-6">
+                      <img
+                        src={project.image}
+                        className="projectImg shadow-md"
+                        alt={project.name}
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="col-lg-6">
+                      <h1 className="display-5 fw-bold lh-1 mb-3">
+                        {project.name}
+                      </h1>
+                      <br />
+                      <p className="lead">{project.role}</p>
+                      <br />
+                      <p className="lead">{project.description}</p> <br />
+                      <p className="lead">{project.technologies}</p>
+                      <div className="d-grid gap-2 d-md-flex justify-content-md-start pt-6">
+                        <a
+                          href={project.github}
+                          className="btn btn-success btn-lg px-4 me-md-2"
+                          target="_blank"
+                        >
+                          Source Code
+                        </a>
+                        <a
+                          href={project.link}
+                          className="btn btn-light btn-lg px-4"
+                          target="_blank"
+                        >
+                          Demo Project
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            ))}
+        </div>
       </div>
     </div>
   );
