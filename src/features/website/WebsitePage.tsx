@@ -2,6 +2,7 @@ import React from "react";
 import "./website.css";
 import bg from "./images/bg.jpg";
 import { useAppSelector } from "../../app/hooks";
+import { Link } from "react-router-dom";
 
 const WebsitePage: React.FC = () => {
   const projects = useAppSelector(
@@ -410,12 +411,12 @@ const WebsitePage: React.FC = () => {
                 ahead of yourself.
               </p>
               <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-                <a
+                <Link
                   className="btn btn-success btn-lg px-4 me-sm-3"
-                  href="/retooling"
+                  to="/retooling"
                 >
                   Join community
-                </a>
+                </Link>
               </div>
             </div>
             <div className="overflow-hidden" style={{ maxHeight: "50vh" }}>
