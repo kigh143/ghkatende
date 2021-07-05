@@ -1,0 +1,142 @@
+#about, #join, #faqs, #process {
+    min-height: 100vh;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+  }
+
+#hero {
+    position: relative;
+    margin-bottom: 30vh;
+    min-height: 75vh;
+    background: linear-gradient(#050505ab, #020202b2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hero .col-lg-6{
+    color:#fff;
+}
+
+#benefits{
+    position: absolute;
+    left:0;
+    right:0;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+    background-color: transparent;
+    bottom:-190px;
+}
+
+.benefit1, .benefit2, .benefit3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#benefits .col-md-4 div{
+    background-color: rgb(255, 255, 255);
+    min-height: 30vh;
+    padding: 20px;
+    text-align: center;
+}
+
+#benefits .col-md-4 div .fa {
+    font-size: 40px;
+    margin: 16px;
+}
+
+#faqs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#faqs .col-md-4 {
+    height: 35vh;
+    padding: 10px;
+}
+
+#faqs .col-md-4 div {
+   background-color: #fff;
+   height: 100%;
+   width:100%;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+   border-radius: 10px;
+   text-align: center;
+}
+
+
+#join  .imageBg{
+    /* background: linear-gradient(#050505ab, #020202b2),
+    url('/images/retoolHero.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#join .words {
+    color:#fff;
+}
+
+.join-form {
+    position: relative;
+}
+
+.join-form > .container {
+    position: absolute;
+    top:-200px;
+
+}
+
+#process .row div{
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step1, .step2, .step3, .step4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.results .col-md-4 i {
+    font-size: 50px;
+    margin-right: 20px;
+    color:#aaa;
+    transition: all .3s;
+}
+
+
+
+.results .col-md-4 i:hover {
+    font-size: 50px;
+    margin-right: 20px;
+    color:rgb(2, 102, 52);
+}
