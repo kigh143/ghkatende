@@ -50,7 +50,7 @@ const RetoolingPage: React.FC = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="index.html">
+                  <a className="nav-link" href="/">
                     Back to GHKatende{" "}
                   </a>
                 </li>
@@ -229,7 +229,7 @@ const RetoolingPage: React.FC = () => {
           <div
             className="imageBg"
             style={{
-              backgroundImage: ` linear-gradient(#050505ab, #020202b2), url(${bg})`,
+              backgroundImage: `linear-gradient(#050505ab, #020202b2), url(${bg})`,
             }}
           >
             <div className="container">
