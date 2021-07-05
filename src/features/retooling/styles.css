@@ -1,4 +1,4 @@
-#about, #join, #faqs, #process {
+.about, .join, .faqs, .process {
     min-height: 100vh;
 }
 
@@ -10,7 +10,6 @@ body {
     position: relative;
     margin-bottom: 30vh;
     min-height: 75vh;
-    background: linear-gradient(#050505ab, #020202b2);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -23,7 +22,7 @@ body {
     color:#fff;
 }
 
-#benefits{
+.benefits{
     position: absolute;
     left:0;
     right:0;
@@ -42,30 +41,30 @@ body {
 }
 
 
-#benefits .col-md-4 div{
+.benefits .col-md-4 div{
     background-color: rgb(255, 255, 255);
     min-height: 30vh;
     padding: 20px;
     text-align: center;
 }
 
-#benefits .col-md-4 div .fa {
+.benefits .col-md-4 div .fa {
     font-size: 40px;
     margin: 16px;
 }
 
-#faqs {
+.faqs {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#faqs .col-md-4 {
+.faqs .col-md-4 {
     height: 35vh;
     padding: 10px;
 }
 
-#faqs .col-md-4 div {
+.faqs .col-md-4 div {
    background-color: #fff;
    height: 100%;
    width:100%;
@@ -79,9 +78,7 @@ body {
 }
 
 
-#join  .imageBg{
-    /* background: linear-gradient(#050505ab, #020202b2),
-    url('/images/retoolHero.png'); */
+.join  .imageBg{
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
@@ -90,7 +87,7 @@ body {
     align-items: center;
 }
 
-#join .words {
+.join .words {
     color:#fff;
 }
 
@@ -104,7 +101,7 @@ body {
 
 }
 
-#process .row div{
+.process .row div{
     min-height: 150px;
     display: flex;
     justify-content: center;
@@ -119,7 +116,7 @@ body {
 }
 
 
-#about {
+.about {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
 import bg from "./images/retoolHero.png";
+import { Link } from "react-router-dom";
 
 const RetoolingPage: React.FC = () => {
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
-    <div>
+    <>
       <header>
         <nav
           className="
@@ -15,7 +23,7 @@ const RetoolingPage: React.FC = () => {
         "
         >
           <div className="container">
-            <a className="navbar-brand" href="retooling.html">
+            <a className="navbar-brand" href="/retooling">
               <b> Re-Tooling </b>
             </a>
             <button
@@ -50,9 +58,9 @@ const RetoolingPage: React.FC = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    Back to GHKatende{" "}
-                  </a>
+                  <Link className="nav-link" to="/">
+                    GHKatende{" "}
+                  </Link>
                 </li>
               </ul>
               <form className="d-flex" style={{ marginLeft: 20 }}>
@@ -103,7 +111,7 @@ const RetoolingPage: React.FC = () => {
               </div>
             </div>
           </div>
-          <div id="benefits">
+          <div id="benefits" className="benefits">
             <div className="container">
               <div className="row">
                 <div className="col-md-4 benefit1">
@@ -152,7 +160,7 @@ const RetoolingPage: React.FC = () => {
           </div>
         </section>
 
-        <section id="about" className="bg-white">
+        <section id="about" className="bg-white about">
           <div className="container">
             <div className="row">
               <div className="col-md-5">
@@ -225,7 +233,7 @@ const RetoolingPage: React.FC = () => {
           </div>
         </section>
 
-        <section id="join">
+        <section id="join" className="join" style={{ height: "100vh" }}>
           <div
             className="imageBg"
             style={{
@@ -237,10 +245,12 @@ const RetoolingPage: React.FC = () => {
                 <div className="col-md-6">
                   <p>Join the family</p>
                   <h2 className="display-5 fw-bold">
-                    Register Your Account Get Free Access
+                    Register Your <br />
+                    Account & Get Access
                   </h2>
                   <p>
                     Do you want to learn how to Code or become a Better
+                    <br />
                     Developer and Entrepreneur, now is the chance to attain your
                     goal.
                   </p>
@@ -252,7 +262,7 @@ const RetoolingPage: React.FC = () => {
           <div className="join-form">
             <div className="container">
               <div className="row">
-                <div className="col-md-6 flex justify-end items-end pb-8">
+                <div className="col-md-7 flex justify-end items-end pb-8">
                   <div>
                     <h2>Do you want to talk to human?</h2>
                     <p>
@@ -264,7 +274,6 @@ const RetoolingPage: React.FC = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-1"></div>
                 <div className="col-md-5">
                   <form className="row g-3 shadow-lg bg-white p-8 rounded-lg">
                     <div className="col-md-6">
@@ -329,7 +338,7 @@ const RetoolingPage: React.FC = () => {
           </div>
         </section>
 
-        <section id="faqs" className="bg-gray-200">
+        <section id="faqs" className="bg-gray-200 faqs">
           <div className="container">
             <div className="mt-4 mb-4">
               <h2 className="display-6 fw-bold">
@@ -405,7 +414,7 @@ const RetoolingPage: React.FC = () => {
           </div>
         </section>
 
-        <section id="process" className="bg-white">
+        <section id="process" className="bg-white process">
           <div className="container">
             <div className="mt-4 mb-4">
               <p>Process?</p>
@@ -458,7 +467,7 @@ const RetoolingPage: React.FC = () => {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 };
 

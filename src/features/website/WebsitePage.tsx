@@ -253,7 +253,7 @@ const WebsitePage: React.FC = () => {
                     <br />
                     <p>
                       {" "}
-                      <b>Always Tooling </b>
+                      <b>Always learning </b>
                     </p>
                     <p>
                       {" "}
