@@ -196,3 +196,44 @@ section .mobo{
 .service{
   background-color: #fff;
 }
+
+
+/* service */
+
+.service {
+  min-height: 300px;
+  width: 95%;
+  margin:10px auto;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.service__icon{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:13px auto ;
+  border:2px solid #eee;
+}
+
+.service__icon .fa{
+   font-size: 50px;
+   color:red;
+}
+
+.service__h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service__details {
+  width: 80%;
+  text-align: center;
+  margin:auto;
+}
