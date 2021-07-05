@@ -1,5 +1,4 @@
 import React from "react";
-
 const styles: any = {
   container: {
     backgroundColor: "#2a9d8f",

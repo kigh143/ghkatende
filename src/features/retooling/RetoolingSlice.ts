@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState: Counter = {
+const initialState = {
   value: 0,
 };
 
-const featureSlice = createSlice({
-  name: "feature",
+const retoolingSlice = createSlice({
+  name: "retooling",
   initialState,
   reducers: {
     incremented(state) {
@@ -17,5 +17,5 @@ const featureSlice = createSlice({
   },
 });
 
-export const { incremented, decremented } = featureSlice.actions;
-export default featureSlice.reducer;
+export const { incremented, decremented } = retoolingSlice.actions;
+export default retoolingSlice.reducer;

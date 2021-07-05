@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState: Counter = {
+const initialState = {
   value: 0,
 };
 
-const counterSlice = createSlice({
-  name: "counter",
+const websiteSlice = createSlice({
+  name: "website",
   initialState,
   reducers: {
     incremented(state) {
@@ -17,5 +17,5 @@ const counterSlice = createSlice({
   },
 });
 
-export const { incremented, decremented } = counterSlice.actions;
-export default counterSlice.reducer;
+export const { incremented, decremented } = websiteSlice.actions;
+export default websiteSlice.reducer;

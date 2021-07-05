@@ -3,7 +3,6 @@ import {
   combineReducers,
   getDefaultMiddleware,
 } from "@reduxjs/toolkit";
-import counterReducer from "../features/counter/counterSlice";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
 import {
   persistStore,
@@ -15,9 +14,12 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
+import WebsiteSlice from "../features/website/WebsiteSlice";
+import RetoolingSlice from "../features/retooling/RetoolingSlice";
 
 const rootReducer = combineReducers({
-  counter: counterReducer,
+  website: WebsiteSlice,
+  retooling: RetoolingSlice,
 });
 
 const persistConfig = {
