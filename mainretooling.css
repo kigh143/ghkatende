@@ -113,17 +113,32 @@ body {
     align-items: center;
 }
 
-.step {
-    background-color: red;
+.step1, .step2, .step3, .step4 {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: capitalize;
 }
+
 
 #about {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: ;
 }
 
+
+.results .col-md-4 i {
+    font-size: 50px;
+    margin-right: 20px;
+    color:#aaa;
+    transition: all .3s;
+}
+
+
+
+.results .col-md-4 i:hover {
+    font-size: 50px;
+    margin-right: 20px;
+    color:rgb(2, 102, 52);
+}
