@@ -15,6 +15,7 @@ const retoolingSlice = createSlice({
       state.value--;
     },
   },
+  extraReducers: {},
 });
 
 export const { incremented, decremented } = retoolingSlice.actions;

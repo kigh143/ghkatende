@@ -1,15 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import "./website.css";
 import bg from "./images/bg.jpg";
 import { useAppSelector } from "../../app/hooks";
 import { Link } from "react-router-dom";
+import { airTableApi } from "../airtable";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const WebsitePage: React.FC = () => {
   const projects = useAppSelector(
     (state) => state.persistedReducer.website.projects
   );
 
-  console.log(projects);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
+
+  const sendEmail = async (e: any) => {
+    setIsSending(true);
+    try {
+      e.preventDefault();
+      const emailObj = { name, email, message };
+      const result = await airTableApi.createEmail(emailObj);
+      if (result.id) {
+        setIsSending(false);
+        toast.dark("😊 Wow, thanks for contact me!", {
+          position: "bottom-right",
+          autoClose: false,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setName("");
+        setEmail("");
+        setMessage("");
+      }
+    } catch (error) {
+      alert(error.message);
+      setIsSending(false);
+    }
+  };
+
   return (
     <div>
       <header>
@@ -370,6 +404,8 @@ const WebsitePage: React.FC = () => {
                       type="text"
                       className="form-control"
                       id="exampleFormControlInput1"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </div>
                   <div className="mb-3">
@@ -378,6 +414,8 @@ const WebsitePage: React.FC = () => {
                       type="email"
                       className="form-control"
                       id="exampleFormControlInput1"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div className="mb-3">
@@ -386,13 +424,30 @@ const WebsitePage: React.FC = () => {
                       className="form-control"
                       id="exampleFormControlTextarea1"
                       rows={3}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                     ></textarea>
                   </div>
 
-                  <div className="col-auto">
-                    <button type="submit" className="btn btn-success mb-3">
-                      Send Message
-                    </button>
+                  <div className="col-auto flex justify-center items-center">
+                    {isSending ? (
+                      <button className="btn btn-waring" type="button" disabled>
+                        <span
+                          className="spinner-border spinner-border-sm"
+                          role="status"
+                          aria-hidden="true"
+                        ></span>
+                        Sending...
+                      </button>
+                    ) : (
+                      <button
+                        type="submit"
+                        className="btn btn-success mb-3"
+                        onClick={(e) => sendEmail(e)}
+                      >
+                        Send Message
+                      </button>
+                    )}
                   </div>
                 </form>
               </div>
@@ -405,17 +460,16 @@ const WebsitePage: React.FC = () => {
             <h1 className="display-4 fw-bold"> Re-Tooling </h1>
             <div className="col-lg-6 mx-auto">
               <p className="lead mb-4">
-                Do you <b>want ot Learn how to Code</b> or becoming a{" "}
-                <b> Better Developer</b> and <b>Entrepreneur</b>,join Re-Tooling
-                , a project base learning community is here to help you get
-                ahead of yourself.
+                For the love programming, I decide to create this community to
+                teach others coding from the experience I have had over years.
+                Welcome to <b>Re-Tooling.</b>
               </p>
               <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
                 <Link
                   className="btn btn-success btn-lg px-4 me-sm-3"
                   to="/retooling"
                 >
-                  Join community
+                  Read More
                 </Link>
               </div>
             </div>
@@ -495,6 +549,15 @@ const WebsitePage: React.FC = () => {
             ))}
         </div>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+      />
     </div>
   );
 };

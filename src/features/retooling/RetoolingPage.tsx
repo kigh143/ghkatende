@@ -95,18 +95,18 @@ const RetoolingPage: React.FC = () => {
                   Retooling,.
                 </p>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
-                  <button
-                    type="button"
+                  <a
+                    href="#join"
                     className="btn btn-success btn-lg px-4 me-md-2"
                   >
                     join Us
-                  </button>
-                  <button
-                    type="button"
+                  </a>
+                  <a
+                    href="#join"
                     className="btn btn-outline-secondary btn-lg px-4"
                   >
                     Contact Us
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -363,7 +363,7 @@ const RetoolingPage: React.FC = () => {
                   <p className="h3">Problem Solving</p>
                   <p>
                     You will learn how to solve problems that are important to
-                    them, including real community issues, more effectively—even
+                    you, including real community issues, more effectively—even
                     learning from failure and possibly starting over.
                   </p>
                 </div>
@@ -421,10 +421,10 @@ const RetoolingPage: React.FC = () => {
               <h2 className="display-5 fw-bold">Our Process</h2>
             </div>
             <div className="row">
-              <div className="col-md-3 step1 bg-gray-200">
+              <div className="col-md-3 step2 bg-gray-400">
                 <h1 className="display-4">step 1</h1>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-6">
                 <p>
                   Create your retooling{" "}
                   <a href="#join">
@@ -432,16 +432,10 @@ const RetoolingPage: React.FC = () => {
                   </a>
                   , It helps us know about you.
                 </p>
-              </div>
-              <div className="col-md-6"></div>
-
-              <div className="col-md-3"></div>
-              <div className="col-md-3 step2 bg-gray-400">
-                <h1 className="display-4">step 2</h1>
-              </div>
-              <div className="col-md-6">
-                set up, get ready for all the required social presence, [
-                Github, LinkedIn, Figma, Gmail account, Zoom, keep tabs ]
+                <p>
+                  set up, get ready for all the required social presence, [
+                  Github, LinkedIn, Figma, Gmail account, Zoom, keep tabs ]
+                </p>
               </div>
 
               <div className="col-md-6">
@@ -450,7 +444,7 @@ const RetoolingPage: React.FC = () => {
                 define the problem
               </div>
               <div className="col-md-3 step3 bg-gray-600">
-                <h1 className="display-4 text-white">step 3</h1>
+                <h1 className="display-4 text-white">step 2</h1>
               </div>
               <div className="col-md-3"></div>
 
@@ -461,7 +455,7 @@ const RetoolingPage: React.FC = () => {
               </div>
 
               <div className="col-md-3 step4 bg-gray-800">
-                <h1 className="display-4 text-white">step 4</h1>
+                <h1 className="display-4 text-white">step 3</h1>
               </div>
             </div>
           </div>
