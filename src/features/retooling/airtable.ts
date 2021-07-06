@@ -2,7 +2,7 @@ import airtable from "airtable";
 
 class AirTableApi {
   BASE_URL: string = "https://api.airtable.com";
-  API_KEY: string = "keyQlx3ioPDZRaY3f";
+  API_KEY: any = `${process.env.REACT_APP_API_KEY}`;
   base: any;
 
   constructor(baseName: string) {
