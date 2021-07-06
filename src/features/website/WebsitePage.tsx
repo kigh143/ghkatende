@@ -3,7 +3,7 @@ import "./website.css";
 import bg from "./images/bg.jpg";
 import { useAppSelector } from "../../app/hooks";
 import { Link } from "react-router-dom";
-import { airTableApi } from "../airtable";
+import { airTableApi } from "./airtable";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -39,7 +39,15 @@ const WebsitePage: React.FC = () => {
         setMessage("");
       }
     } catch (error) {
-      alert(error.message);
+      toast.error(error.message, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
       setIsSending(false);
     }
   };
@@ -431,13 +439,13 @@ const WebsitePage: React.FC = () => {
 
                   <div className="col-auto flex justify-center items-center">
                     {isSending ? (
-                      <button className="btn btn-waring" type="button" disabled>
+                      <button className="btn btn-warning shadow-lg" disabled>
                         <span
-                          className="spinner-border spinner-border-sm"
+                          className="spinner-grow spinner-grow-sm mr-4"
                           role="status"
                           aria-hidden="true"
                         ></span>
-                        Sending...
+                        Sending Message ...
                       </button>
                     ) : (
                       <button

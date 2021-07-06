@@ -1,9 +1,72 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 import bg from "./images/retoolHero.png";
 import { Link } from "react-router-dom";
+import { airTableApi } from "./airtable";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const RetoolingPage: React.FC = () => {
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [gender, setGender] = useState("");
+  const [hearabout, setHearAbout] = useState("");
+  const [experience, setExperience] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const register = async (e: any) => {
+    try {
+      e.preventDefault();
+      setLoading(true);
+      const user = {
+        firstname,
+        lastname,
+        phone,
+        gender,
+        experience,
+        email,
+        hearabout,
+      };
+      const res = await airTableApi.createUser(user);
+      if (res.id) {
+        setLoading(false);
+        toast.dark(
+          "😊 Wow, thanks for registering, I will be in touch shortly",
+          {
+            position: "bottom-right",
+            autoClose: false,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          }
+        );
+
+        setEmail("");
+        setFirstName("");
+        setLastName("");
+        setHearAbout("");
+        setExperience("");
+        setGender("");
+        setPhone("");
+      }
+    } catch (error) {
+      setLoading(false);
+      toast.error(error.message, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  };
+
   useEffect(() => {
     window.scroll({
       top: 0,
@@ -269,7 +332,7 @@ const RetoolingPage: React.FC = () => {
                       If you’d like to talk to a human on the phone, feel free
                       to
                       <br />
-                      call us on: +256788127712. You can also
+                      call us on: <b>+256788127712.</b> You can also
                       <a href="">book</a> a phone call,
                     </p>
                   </div>
@@ -282,7 +345,8 @@ const RetoolingPage: React.FC = () => {
                         type="text"
                         className="form-control"
                         id="inputAddress"
-                        placeholder="1234 Main St"
+                        onChange={(e) => setFirstName(e.target.value)}
+                        value={firstname}
                       />
                     </div>
                     <div className="col-md-6">
@@ -291,8 +355,22 @@ const RetoolingPage: React.FC = () => {
                         type="text"
                         className="form-control"
                         id="inputAddress"
-                        placeholder="1234 Main St"
+                        onChange={(e) => setLastName(e.target.value)}
+                        value={lastname}
                       />
+                    </div>
+                    <div className="col-12">
+                      <label className="form-label">Gender</label>
+                      <select
+                        id="inputState"
+                        className="form-select"
+                        onChange={(e) => setGender(e.target.value)}
+                        value={gender}
+                      >
+                        <option selected>Choose...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                      </select>
                     </div>
                     <div className="col-md-12">
                       <label className="form-label">Email</label>
@@ -300,36 +378,74 @@ const RetoolingPage: React.FC = () => {
                         type="email"
                         className="form-control"
                         id="inputEmail4"
+                        onChange={(e) => setEmail(e.target.value)}
+                        value={email}
                       />
                     </div>
                     <div className="col-md-12">
                       <label className="form-label">Phone Number</label>
                       <input
-                        type="password"
+                        type="text"
                         className="form-control"
                         id="inputPassword4"
+                        onChange={(e) => setPhone(e.target.value)}
+                        value={phone}
                       />
                     </div>
 
                     <div className="col-12">
                       <label className="form-label">
-                        Programming experience
+                        Previous Coding Experience
                       </label>
-                      <select id="inputState" className="form-select">
+                      <select
+                        id="inputState"
+                        className="form-select"
+                        onChange={(e) => setExperience(e.target.value)}
+                        value={experience}
+                      >
                         <option selected>Choose...</option>
-                        <option>Never Coded</option>
-                        <option>New to coding</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
                         <option></option>
                       </select>
                     </div>
 
                     <div className="col-12">
-                      <button
-                        type="submit"
-                        className="btn btn-success btn-block"
+                      <label className="form-label">
+                        How did you hear about this program? required
+                      </label>
+                      <select
+                        className="form-select"
+                        onChange={(e) => setHearAbout(e.target.value)}
+                        value={hearabout}
                       >
-                        Register
-                      </button>
+                        <option selected>Choose...</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="LinkedIn">LinkedIn</option>
+                        <option value="Friend">Friend</option>
+                        <option value="While googling">While googling</option>
+                      </select>
+                    </div>
+
+                    <div className="col-12 flex justify-center items-center">
+                      {loading ? (
+                        <button className="btn btn-warning shadow-lg" disabled>
+                          <span
+                            className="spinner-grow spinner-grow-sm mr-4"
+                            role="status"
+                            aria-hidden="true"
+                          ></span>
+                          Creating Account
+                        </button>
+                      ) : (
+                        <button
+                          type="submit"
+                          className="btn btn-success btn-block"
+                          onClick={(e) => register(e)}
+                        >
+                          Register
+                        </button>
+                      )}
                     </div>
                   </form>
                 </div>
@@ -460,6 +576,15 @@ const RetoolingPage: React.FC = () => {
             </div>
           </div>
         </section>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+        />
       </main>
     </>
   );
