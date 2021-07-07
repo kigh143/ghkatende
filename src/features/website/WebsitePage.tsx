@@ -341,6 +341,9 @@ const WebsitePage: React.FC = () => {
                       <span className="badge rounded-pill bg-info text-dark">
                         CircleCI & Fastlane
                       </span>
+                      <span className="badge rounded-pill bg-success">
+                        Airtable
+                      </span>
                       <span className="badge rounded-pill bg-light text-dark">
                         Git
                       </span>
