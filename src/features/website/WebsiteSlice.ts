@@ -87,6 +87,38 @@ const initialState = {
       github: "https://github.com/kigh143",
     },
   ],
+  connections: [
+    {
+      name: "StackOverFlow",
+      icon: "stack-overflow",
+      color: "orange",
+      link: "https://stackoverflow.com/users/4789428/ghkatende",
+    },
+    {
+      name: "GitHub",
+      icon: "github-square",
+      color: "white",
+      link: "https://github.com/kigh143",
+    },
+    {
+      name: "LinkedIn",
+      icon: "linkedin-square",
+      color: "#0e76a8",
+      link: "https://www.linkedin.com/in/hakim-katende-710375148/",
+    },
+    {
+      name: "Facebook",
+      icon: "facebook-square",
+      color: "#4285F4",
+      link: "https://www.facebook.com/ghkatende",
+    },
+    {
+      name: "FreeCodeCamp",
+      icon: "free-code-camp",
+      color: "white",
+      link: "https://www.freecodecamp.org/ghkatende1",
+    },
+  ],
 };
 
 const websiteSlice = createSlice({

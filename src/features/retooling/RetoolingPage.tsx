@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 import bg from "./images/retoolHero.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { airTableApi } from "./airtable";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -106,19 +107,19 @@ const RetoolingPage: React.FC = () => {
             >
               <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link" href="#about">
+                  <Link className="nav-link" to="#about">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#process">
+                  <Link className="nav-link" to="#process">
                     How it works
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#faqs">
+                  <Link className="nav-link" to="#faqs">
                     FAQs{" "}
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/">
@@ -127,10 +128,9 @@ const RetoolingPage: React.FC = () => {
                 </li>
               </ul>
               <form className="d-flex" style={{ marginLeft: 20 }}>
-                <a href="#join" className="btn btn-success">
-                  {" "}
+                <Link to="#join" className="btn btn-success">
                   join Retooling
-                </a>
+                </Link>
               </form>
             </div>
           </div>
@@ -166,7 +166,7 @@ const RetoolingPage: React.FC = () => {
                   </a>
                   <a
                     href="#join"
-                    className="btn btn-outline-secondary btn-lg px-4"
+                    className="btn btn-outline-success btn-lg px-4"
                   >
                     Contact Us
                   </a>
@@ -227,7 +227,7 @@ const RetoolingPage: React.FC = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-5">
-                <img src="./images/learn1.png" alt="" />
+                <img src="./images/learn.png" alt="" />
               </div>
               <div className="col-md-6 flex item-center flex-col justify-center">
                 <p>What is retooling?</p>
@@ -530,48 +530,72 @@ const RetoolingPage: React.FC = () => {
           </div>
         </section>
 
-        <section id="process" className="bg-white process">
+        <section
+          id="process"
+          className="bg-white process flex justify-center items-center"
+        >
           <div className="container">
             <div className="mt-4 mb-4">
               <p>Process?</p>
               <h2 className="display-5 fw-bold">Our Process</h2>
-            </div>
-            <div className="row">
-              <div className="col-md-3 step2 bg-gray-400">
-                <h1 className="display-4">step 1</h1>
-              </div>
-              <div className="col-md-6">
-                <p>
-                  Create your retooling{" "}
-                  <a href="#join">
-                    <b>Here</b>
-                  </a>
-                  , It helps us know about you.
-                </p>
-                <p>
-                  set up, get ready for all the required social presence, [
-                  Github, LinkedIn, Figma, Gmail account, Zoom, keep tabs ]
-                </p>
-              </div>
+              <br />
+              <div className="row">
+                <div className="col-md-4">
+                  <div className="card mb-3 text-center">
+                    <img
+                      src="/images/create.png"
+                      className="card-img-top"
+                      alt="..."
+                      style={{ width: "60%", height: "auto", margin: "auto" }}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">STEP 1</h5>
+                      <p className="card-text">
+                        Register for retooling using the form above, We shall
+                        send detailed information on your email
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-              <div className="col-md-6">
-                Get project, from the domain we listed on our website select one
-                and come uo will a project to solve a problem from domain.
-                define the problem
-              </div>
-              <div className="col-md-3 step3 bg-gray-600">
-                <h1 className="display-4 text-white">step 2</h1>
-              </div>
-              <div className="col-md-3"></div>
+                <div className="col-md-4">
+                  <div className="card mb-3 text-center">
+                    <div className="card-body">
+                      <h5 className="card-title">STEP 2</h5>
+                      <p className="card-text">
+                        With Retooling you have to have account with this site/
+                        application, ie Github, LinkedIn, Figma, G-mail account,
+                        Zoom, keep tabs
+                      </p>
+                    </div>
+                    <img
+                      src="/images/social.png"
+                      className="card-img-top"
+                      alt="..."
+                      style={{ width: "60%", height: "auto", margin: "auto" }}
+                    />
+                  </div>
+                </div>
 
-              <div className="col-md-3"></div>
-              <div className="col-md-6">
-                We shall use a demo project, which what you have learn will be
-                applied to individual / groups projects
-              </div>
+                <div className="col-md-4">
+                  <div className="card mb-3 text-center">
+                    <img
+                      src="/images/ideas.png"
+                      className="card-img-top"
+                      alt="..."
+                      style={{ width: "60%", height: "auto", margin: "auto" }}
+                    />
 
-              <div className="col-md-3 step4 bg-gray-800">
-                <h1 className="display-4 text-white">step 3</h1>
+                    <div className="card-body">
+                      <h5 className="card-title">STEP 3</h5>
+                      <p className="card-text">
+                        Since we teach with a project based paradigm, you might
+                        be required to come up with an idea that solves a social
+                        problem in your community. Please Come up with one.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "./website.css";
 import bg from "./images/bg.jpg";
 import { useAppSelector } from "../../app/hooks";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { airTableApi } from "./airtable";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { HashLink as Link } from "react-router-hash-link";
 
 const WebsitePage: React.FC = () => {
   const projects = useAppSelector(
@@ -84,26 +85,26 @@ const WebsitePage: React.FC = () => {
             >
               <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link" href="#about">
+                  <Link className="nav-link" to="#about">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#casestudy">
+                  <Link className="nav-link" to="/#casestudy">
                     Projects
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#service">
+                  <Link className="nav-link" to="/#service">
                     {" "}
                     Re-Tooling{" "}
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <form className="d-flex" style={{ marginLeft: 20 }}>
-                <a href="#contact" className="btn btn-success">
+                <Link to="/#contact" className="btn btn-success">
                   I'm Social, Let's connect
-                </a>
+                </Link>
               </form>
             </div>
           </div>
@@ -143,9 +144,9 @@ const WebsitePage: React.FC = () => {
                   <b>love what I do</b>.
                 </p>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-8">
-                  <a href="#contact" className="btn btn-success btn-lg px-4">
+                  <Link to="/#contact" className="btn btn-success btn-lg px-4">
                     Hire Me
-                  </a>
+                  </Link>
                   <a
                     target="_blank"
                     href="/images/hakimKatendeCV.docx"
@@ -501,8 +502,15 @@ const WebsitePage: React.FC = () => {
             projects.map((project, index) => (
               <section
                 id="project"
-                style={{ background: project.color, color: project.textColor }}
-                className="py-2"
+                style={{
+                  background: project.color,
+                  color: project.textColor,
+                  height: "100vh",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+                className="p-8"
               >
                 <div className="container col-xxl-8 px-4">
                   <div className="mobo">

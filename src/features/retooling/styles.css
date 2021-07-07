@@ -103,9 +103,9 @@ body {
 
 .process .row div{
     min-height: 150px;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .step1, .step2, .step3, .step4 {
