@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 import bg from "./images/retoolHero.png";
-// import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { HashLink as Link } from "react-router-hash-link";
 import { airTableApi } from "./airtable";
 import { ToastContainer, toast } from "react-toastify";
@@ -77,6 +77,31 @@ const RetoolingPage: React.FC = () => {
   }, []);
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Retooling | Project based coding school</title>
+        <meta
+          name="description"
+          content="We embrace Collaboration as its key to success. Students work together on projects to utilize knowledge sharing."
+        />
+        <meta name="author" content="Hakim Katende" />
+        <meta name="generator" content="Hugo 0.80.0" />
+        <link rel="apple-touch-icon" href="/images/logo.png" sizes="180x180" />
+        <link
+          rel="icon"
+          href="/images/logo.png"
+          sizes="32x32"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          href="/images/logo.png"
+          sizes="16x16"
+          type="image/png"
+        />
+        <link rel="icon" href="/images/logo.png" />
+        <link rel="icon" type="image/png" href="/images/logo.png" />
+      </Helmet>
       <header>
         <nav
           className="
@@ -87,9 +112,9 @@ const RetoolingPage: React.FC = () => {
         "
         >
           <div className="container">
-            <a className="navbar-brand" href="/retooling">
+            <Link className="navbar-brand" to="/retooling">
               <b> Re-Tooling </b>
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"

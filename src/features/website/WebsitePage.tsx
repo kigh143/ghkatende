@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./website.css";
 import bg from "./images/bg.jpg";
 import { useAppSelector } from "../../app/hooks";
-// import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { airTableApi } from "./airtable";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -55,6 +55,34 @@ const WebsitePage: React.FC = () => {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          GHKatende | Working as website and Mobile application in different
+          domain
+        </title>
+        <meta
+          name="description"
+          content="A web and mobile Developer. I'm very passionate and dedicated to my work."
+        />
+        <meta name="author" content="Hakim Katende" />
+        <meta name="generator" content="Hugo 0.80.0" />
+        <link rel="apple-touch-icon" href="/images/logo.png" sizes="180x180" />
+        <link
+          rel="icon"
+          href="/images/logo.png"
+          sizes="32x32"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          href="/images/logo.png"
+          sizes="16x16"
+          type="image/png"
+        />
+        <link rel="icon" href="/images/logo.png" />
+        <link rel="icon" type="image/png" href="/images/logo.png" />
+      </Helmet>
       <header>
         <nav
           className="
