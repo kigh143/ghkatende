@@ -93,9 +93,9 @@ const WebsitePage: React.FC = () => {
         "
         >
           <div className="container">
-            <a className="navbar-brand" href="/#webHero">
+            <Link className="navbar-brand" to="/#webHero">
               <b>GHKatende</b>
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -536,7 +536,7 @@ const WebsitePage: React.FC = () => {
                 style={{
                   background: project.color,
                   color: project.textColor,
-                  height: "100vh",
+                  minHeight: "100vh",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",

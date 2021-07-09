@@ -38,6 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
 
@@ -98,7 +99,6 @@ body {
 .join-form > .container {
     position: absolute;
     top:-40vh;
-
 }
 
 .process .row div{
@@ -137,3 +137,38 @@ body {
     margin-right: 20px;
     color:rgb(2, 102, 52);
 }
+
+
+@media only screen and (max-width: 1000px) {
+        body {
+        background-color: lightblue;
+        }
+        .join-form {
+        min-height: 50vh; 
+        }
+
+        .join-form > .container {
+            min-height: 60vh;
+            position: relative;
+            top: 0;
+            padding: 20px;
+        }
+        .benefits{
+        position: relative;
+        }
+
+        #hero {
+        min-height: 60vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+        .human {
+            display: none;
+        }
+    
+  }

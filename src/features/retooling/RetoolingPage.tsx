@@ -321,7 +321,7 @@ const RetoolingPage: React.FC = () => {
           </div>
         </section>
 
-        <section id="join" className="join" style={{ height: "100vh" }}>
+        <section id="join" className="join">
           <div
             className="imageBg"
             style={{
@@ -350,9 +350,9 @@ const RetoolingPage: React.FC = () => {
           <div className="join-form">
             <div className="container">
               <div className="row">
-                <div className="col-md-7 flex justify-end items-end pb-8">
+                <div className="col-md-7 flex justify-end items-end pb-8 human">
                   <div>
-                    <h2>Do you want to talk to human?</h2>
+                    <h2>Want to talk to a human?</h2>
                     <p>
                       If you’d like to talk to a human on the phone, feel free
                       to
