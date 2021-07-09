@@ -139,16 +139,19 @@ const WebsitePage: React.FC = () => {
                   className="onMobile"
                 />
                 <div className="mt-4 flex text-center">
-                  {connections.map((connection) => (
-                    <a href={connection.link} target="_blank" className="m-4">
-                      <i
-                        className={`fa fa-${connection.icon}`}
-                        style={{ color: connection.color, fontSize: 40 }}
-                      ></i>{" "}
-                      <br />
-                      <small style={{ color: "#fff" }}>{connection.name}</small>
-                    </a>
-                  ))}
+                  {connections &&
+                    connections.map((connection) => (
+                      <a href={connection.link} target="_blank" className="m-4">
+                        <i
+                          className={`fa fa-${connection.icon}`}
+                          style={{ color: connection.color, fontSize: 40 }}
+                        ></i>{" "}
+                        <br />
+                        <small style={{ color: "#fff" }}>
+                          {connection.name}
+                        </small>
+                      </a>
+                    ))}
                 </div>
                 <h2 color="yellow">stuff</h2>
               </div>

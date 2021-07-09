@@ -112,12 +112,6 @@ const initialState = {
       color: "#4285F4",
       link: "https://www.facebook.com/ghkatende",
     },
-    // {
-    //   name: "FreeCodeCamp",
-    //   icon: "free-code-camp",
-    //   color: "white",
-    //   link: "https://www.freecodecamp.org/ghkatende1",
-    // },
   ],
 };
 
