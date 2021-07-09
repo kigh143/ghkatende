@@ -6,6 +6,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import { airTableApi } from "./airtable";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SEO from "../../components/SEO";
 
 const RetoolingPage: React.FC = () => {
   const [firstname, setFirstName] = useState("");
@@ -77,31 +78,13 @@ const RetoolingPage: React.FC = () => {
   }, []);
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Retooling | Project based coding school</title>
-        <meta
-          name="description"
-          content="We embrace Collaboration as its key to success. Students work together on projects to utilize knowledge sharing."
-        />
-        <meta name="author" content="Hakim Katende" />
-        <meta name="generator" content="Hugo 0.80.0" />
-        <link rel="apple-touch-icon" href="/images/logo.png" sizes="180x180" />
-        <link
-          rel="icon"
-          href="/images/logo.png"
-          sizes="32x32"
-          type="image/png"
-        />
-        <link
-          rel="icon"
-          href="/images/logo.png"
-          sizes="16x16"
-          type="image/png"
-        />
-        <link rel="icon" href="/images/logo.png" />
-        <link rel="icon" type="image/png" href="/images/logo.png" />
-      </Helmet>
+      <SEO
+        title="Retooling | Project based coding school"
+        description="Retooling is a coding school that runs on a project-based learning paradigm to teach students how to program and solve problems using real-world scenarios."
+        logo="/logo.png"
+        image={bg}
+        url="https://ghkatende.com/#/retooling"
+      />
       <header>
         <nav
           className="

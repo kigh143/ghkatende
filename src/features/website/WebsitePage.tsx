@@ -7,6 +7,7 @@ import { airTableApi } from "./airtable";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { HashLink as Link } from "react-router-hash-link";
+import SEO from "../../components/SEO";
 
 const WebsitePage: React.FC = () => {
   const projects = useAppSelector(
@@ -59,31 +60,13 @@ const WebsitePage: React.FC = () => {
 
   return (
     <div>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>GHKatende | A website and Mobile application developer</title>
-        <meta
-          name="description"
-          content="Katende Hakim is a web and mobile Developer. I'm very passionate and dedicated to my work."
-        />
-        <meta name="author" content="Hakim Katende" />
-        <meta name="generator" content="Hugo 0.80.0" />
-        <link rel="apple-touch-icon" href="/images/logo.png" sizes="180x180" />
-        <link
-          rel="icon"
-          href="/images/logo.png"
-          sizes="32x32"
-          type="image/png"
-        />
-        <link
-          rel="icon"
-          href="/images/logo.png"
-          sizes="16x16"
-          type="image/png"
-        />
-        <link rel="icon" href="/images/logo.png" />
-        <link rel="icon" type="image/png" href="/images/logo.png" />
-      </Helmet>
+      <SEO
+        title="GHKatende | A website and Mobile application developer"
+        description="Katende Hakim is a web and mobile Developer. I'm very passionate and dedicated to my work."
+        logo="/logo.png"
+        image="./images/ivan1.jpg"
+        url="https://ghkatende.com/"
+      />
       <header>
         <nav
           className="
