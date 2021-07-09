@@ -80,7 +80,7 @@ const initialState = {
       technologies: "React Js, Tailwind CSS, ",
       image: "./images/projects/keeptabs.png",
       description:
-        "An offline digital wallet for all your bank cards. There is no need to carry your cards everywhere if you are not going to use them. Add them to Mi-Cards for easy access. ",
+        "A personal task management webapp aimed at tracking your personal projects. You can create a projects and projects tasks. It gives insights on your project velocity, daily performance tracking. It also reminds you of the projects you have forgotten about.  ",
       link: "https://play.google.com/store/apps/details?id=com.micards",
       color: "#a2d2ff",
       textColor: "#333",
@@ -112,12 +112,12 @@ const initialState = {
       color: "#4285F4",
       link: "https://www.facebook.com/ghkatende",
     },
-    {
-      name: "FreeCodeCamp",
-      icon: "free-code-camp",
-      color: "white",
-      link: "https://www.freecodecamp.org/ghkatende1",
-    },
+    // {
+    //   name: "FreeCodeCamp",
+    //   icon: "free-code-camp",
+    //   color: "white",
+    //   link: "https://www.freecodecamp.org/ghkatende1",
+    // },
   ],
 };
 

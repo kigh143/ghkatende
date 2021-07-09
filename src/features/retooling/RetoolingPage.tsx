@@ -147,6 +147,11 @@ const RetoolingPage: React.FC = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
+                  <Link className="nav-link" to="#projects">
+                    Projects{" "}
+                  </Link>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link" to="/">
                     GHKatende{" "}
                   </Link>
@@ -223,9 +228,9 @@ const RetoolingPage: React.FC = () => {
                     </p>
                     <h3 className="h3">Executive connection</h3>
                     <p>
-                      All the projects worked by the students are promoted since
-                      they are built based on existing problems. These projects
-                      attache investors.
+                      All the projects worked on by the students are promoted
+                      since they are built based on solving existing problems.
+                      These projects attache investors.
                     </p>
                   </div>
                 </div>
@@ -255,27 +260,27 @@ const RetoolingPage: React.FC = () => {
                 <img src="./images/learn.png" alt="" />
               </div>
               <div className="col-md-6 flex item-center flex-col justify-center">
-                <p>What is retooling?</p>
+                <p>Retooling</p>
                 <br />
-                <h2 className="display-5 fw-bold">Re-Tooling</h2>
+                <h2 className="display-5 fw-bold">What is Re-Tooling ?</h2>
                 <br />
                 <p className="mb-2">
-                  Retooling is a coding school that runs on a project-based
-                  learning paradigm to teach students how to program and solve
-                  problems using real-world scenarios.
+                  Retooling is a coding school that runs on a{" "}
+                  <b>project-based learning paradigm</b> to teach students how
+                  to program and solve problems using real-world scenarios.
                 </p>
                 <p className="mb-2">
-                  we embrace Collaboration as its key to success. Students work
-                  together on projects to utilize knowledge sharing.
+                  we embrace Collaboration as its key to our success. Students
+                  work together on projects to utilize knowledge sharing.
                 </p>
                 <p className="mb-2">
                   Our teaching method is powerful and has extensive benefits for
                   students, ranging from critical thinking to project management
-                  to self-confidence.
+                  and self-confidence.
                 </p>
                 <p className="mb2">
                   We focus how energy on solving problems facing our communities
-                  and we learn.
+                  as we learn.
                 </p>
               </div>
             </div>
@@ -357,8 +362,7 @@ const RetoolingPage: React.FC = () => {
                       If you’d like to talk to a human on the phone, feel free
                       to
                       <br />
-                      call us on: <b>+256788127712.</b> You can also
-                      <a href="">book</a> a phone call,
+                      call us on: <b>+256788127712.</b>
                     </p>
                   </div>
                 </div>
@@ -420,7 +424,7 @@ const RetoolingPage: React.FC = () => {
 
                     <div className="col-12">
                       <label className="form-label">
-                        Previous Coding Experience
+                        Do you have previous coding experience
                       </label>
                       <select
                         id="inputState"
@@ -537,7 +541,7 @@ const RetoolingPage: React.FC = () => {
                   <p>
                     You will learn to look at problems with a critical thinking
                     lens, asking questions and coming up with possible solutions
-                    for their project.
+                    to the project.
                   </p>
                 </div>
               </div>
@@ -615,13 +619,25 @@ const RetoolingPage: React.FC = () => {
                       <h5 className="card-title">STEP 3</h5>
                       <p className="card-text">
                         Since we teach with a project based paradigm, you might
-                        be required to come up with an idea that solves a social
+                        be required to come up with an idea that solves a
                         problem in your community. Please Come up with one.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section className="projects" id="projects">
+          <div className="container">
+            <p>Active projects</p>
+            <h2 className="display-5 fw-bold">Students projects</h2>
+            <br />
+            <div className="row">
+              <div className="col-md-4"></div>
+              <div className="col-md-4"></div>
+              <div className="col-md-4"></div>
             </div>
           </div>
         </section>

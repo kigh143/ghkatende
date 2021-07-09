@@ -13,6 +13,10 @@ const WebsitePage: React.FC = () => {
     (state) => state.persistedReducer.website.projects
   );
 
+  const connections = useAppSelector(
+    (state) => state.persistedReducer.website.connections
+  );
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -57,13 +61,10 @@ const WebsitePage: React.FC = () => {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>
-          GHKatende | Working as website and Mobile application in different
-          domain
-        </title>
+        <title>GHKatende | A website and Mobile application developer</title>
         <meta
           name="description"
-          content="A web and mobile Developer. I'm very passionate and dedicated to my work."
+          content="Katende Hakim is a web and mobile Developer. I'm very passionate and dedicated to my work."
         />
         <meta name="author" content="Hakim Katende" />
         <meta name="generator" content="Hugo 0.80.0" />
@@ -154,6 +155,19 @@ const WebsitePage: React.FC = () => {
                   alt="GHKatende"
                   className="onMobile"
                 />
+                <div className="mt-4 flex text-center">
+                  {connections.map((connection) => (
+                    <a href={connection.link} target="_blank" className="m-4">
+                      <i
+                        className={`fa fa-${connection.icon}`}
+                        style={{ color: connection.color, fontSize: 40 }}
+                      ></i>{" "}
+                      <br />
+                      <small style={{ color: "#fff" }}>{connection.name}</small>
+                    </a>
+                  ))}
+                </div>
+                <h2 color="yellow">stuff</h2>
               </div>
               <div className="col-lg-6">
                 <h3 className="display-6 fw-bold lh-1 mb-3">Hello, I am</h3>
@@ -173,15 +187,15 @@ const WebsitePage: React.FC = () => {
                 </p>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-8">
                   <Link to="/#contact" className="btn btn-success btn-lg px-4">
-                    Hire Me
+                    Contact Me
                   </Link>
-                  <a
+                  {/* <a
                     target="_blank"
                     href="/images/hakimKatendeCV.docx"
                     className="btn btn-light btn-lg px-4"
                   >
                     DownLoad CV
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
@@ -500,9 +514,9 @@ const WebsitePage: React.FC = () => {
             <h1 className="display-4 fw-bold"> Re-Tooling </h1>
             <div className="col-lg-6 mx-auto">
               <p className="lead mb-4">
-                For the love programming, I decide to create this community to
-                teach others coding from the experience I have had over years.
-                Welcome to <b>Re-Tooling.</b>
+                For the love of programming, I decide to create this community
+                to teach others coding from the experience I have had over
+                years. Welcome to <b>Re-Tooling.</b>
               </p>
               <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
                 <Link
