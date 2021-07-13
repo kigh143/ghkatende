@@ -37,6 +37,7 @@ const SEO: React.FC<Props> = ({ title, description, logo, image, url }) => {
       <meta property="og:image:width" content="1000" />
       <meta property="og:image:height" content="500" />
       <meta property="og:image:alt" content={title} />
+      <meta property="fb:app_id" content="418147418766645" />
     </Helmet>
   );
 };

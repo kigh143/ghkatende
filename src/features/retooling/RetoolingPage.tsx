@@ -165,24 +165,24 @@ const RetoolingPage: React.FC = () => {
                   Invest in Your Future
                 </h1>
                 <p className="lead">
-                  Do you want to learn how to Code or become a Better Developer
-                  <br />
-                  and Entrepreneur, Take the first step to learn with
-                  Retooling,.
+                  Get the Experience Employers ask for or start your own
+                  business as a software developer.
+                  <br /> Take the first step to learn with Retooling,.
                 </p>
+
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
-                  <a
-                    href="#join"
+                  <Link
+                    to="#join"
                     className="btn btn-success btn-lg px-4 me-md-2"
                   >
                     join Us
-                  </a>
-                  <a
-                    href="#join"
+                  </Link>
+                  <Link
+                    to="#join"
                     className="btn btn-outline-success btn-lg px-4"
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -240,7 +240,7 @@ const RetoolingPage: React.FC = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-5">
-                <img src="./images/learn.png" alt="" />
+                <img src="./images/retoolin.png" alt="" />
               </div>
               <div className="col-md-6 flex item-center flex-col justify-center">
                 <p>Retooling</p>
@@ -325,10 +325,9 @@ const RetoolingPage: React.FC = () => {
                     Account & Get Access
                   </h2>
                   <p>
-                    Do you want to learn how to Code or become a Better
-                    <br />
-                    Developer and Entrepreneur, now is the chance to attain your
-                    goal.
+                    We are starting on 26th July 2021. and this runs for 3
+                    months. <br />
+                    Join today before doors are closed.
                   </p>
                 </div>
                 <div className="col-md-6"></div>
@@ -345,7 +344,7 @@ const RetoolingPage: React.FC = () => {
                       If you’d like to talk to a human on the phone, feel free
                       to
                       <br />
-                      call us on: <b>+256788127712.</b>
+                      call us on: <b>+256705752569.</b>
                     </p>
                   </div>
                 </div>

@@ -161,16 +161,12 @@ const WebsitePage: React.FC = () => {
                   G . Hakim Katende
                 </h1>
                 <h5 className="h3">
-                  A web and mobile Developer. I'm very passionate and dedicated
-                  to my work.
+                  Experienced Software developer with 3+ years developing Web
+                  and mobile application.
                 </h5>
                 <br />
                 <br />
-                <p>
-                  This site hosts a variety of things <b>professional</b> and{" "}
-                  <b>Personal</b>; about <b>who I am</b>, why I{" "}
-                  <b>love what I do</b>.
-                </p>
+
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-8">
                   <Link to="/#contact" className="btn btn-success btn-lg px-4">
                     Contact Me
@@ -260,12 +256,12 @@ const WebsitePage: React.FC = () => {
                     style={{ paddingLeft: 16 }}
                   >
                     <p>
-                      My name is Katende Hakim, a Web and Mobile Developer. I'm
-                      very passionate and dedicated to my work. With
-                      <b>3 years experience as a professional</b> developer, I
-                      have acquired the skills and knowledge necessary to make
-                      your project a success. I enjoy every step of the design
-                      process, from discussion and collaboration.
+                      My name is Katende Hakim, An experienced Software
+                      developer with 3+ years developing Web and mobile
+                      application, I have acquired the skills and knowledge
+                      necessary to make your project a success. I enjoy every
+                      step of the design process, from requirements elicitation
+                      to software deployment.
                     </p>
                     <br />
                     <p>
