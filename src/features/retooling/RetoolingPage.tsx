@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 import bg from "./images/retoolHero.png";
-import { Helmet } from "react-helmet";
+import emailjs from "emailjs-com";
 import { HashLink as Link } from "react-router-hash-link";
 import { airTableApi } from "./airtable";
 import { ToastContainer, toast } from "react-toastify";
@@ -33,6 +33,7 @@ const RetoolingPage: React.FC = () => {
       };
       const res = await airTableApi.createUser(user);
       if (res.id) {
+        sendEmail();
         setLoading(false);
         toast.dark(
           "😊 Wow, thanks for registering, I will be in touch shortly",
@@ -67,6 +68,28 @@ const RetoolingPage: React.FC = () => {
         progress: undefined,
       });
     }
+  };
+
+  const sendEmail = () => {
+    const templateParams = {
+      name: firstname,
+      email,
+    };
+    emailjs
+      .send(
+        "service_ncvgio7",
+        "template_cq5m8j8",
+        templateParams,
+        "user_H2xMonzuSTVTtlZFH2Uip"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
   };
 
   useEffect(() => {

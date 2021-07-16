@@ -496,9 +496,14 @@ const WebsitePage: React.FC = () => {
             <h1 className="display-4 fw-bold"> Re-Tooling </h1>
             <div className="col-lg-6 mx-auto">
               <p className="lead mb-4">
-                For the love of programming, I decide to create this community
-                to teach others coding from the experience I have had over
-                years. Welcome to <b>Re-Tooling.</b>
+                For the love of programming, I decided to create this community
+                to teach others how code. Welcome to{" "}
+                <a
+                  href="https://www.facebook.com/weareretooling"
+                  target="_blank"
+                >
+                  Re-Tooling.
+                </a>
               </p>
               <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
                 <Link
