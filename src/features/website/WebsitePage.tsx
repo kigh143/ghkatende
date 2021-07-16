@@ -24,6 +24,9 @@ const WebsitePage: React.FC = () => {
   const [isSending, setIsSending] = useState(false);
 
   const sendEmail = async (e: any) => {
+    if (name.length === 0) return;
+    if (email.length === 0) return;
+    if (message.length === 0) return;
     setIsSending(true);
     try {
       e.preventDefault();
