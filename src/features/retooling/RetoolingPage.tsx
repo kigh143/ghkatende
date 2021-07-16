@@ -17,10 +17,32 @@ const RetoolingPage: React.FC = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [location, setLocation] = useState({
+    city: "",
+    country_code: "UG",
+    country_name: "Uganda",
+    ip: "102.83.255.126",
+    latitude: 1,
+    longitude: 32,
+    metro_code: 0,
+    region_code: "",
+    region_name: "",
+    time_zone: "Africa/Kampala",
+    zip_code: "",
+  });
 
   const register = async (e: any) => {
+    e.preventDefault();
+
+    if (email.length === 0) return;
+    if (firstname.length === 0) return;
+    if (lastname.length === 0) return;
+    if (phone.length === 0) return;
+
+    getLocation();
+
     try {
-      e.preventDefault();
       setLoading(true);
       const user = {
         firstname,
@@ -30,6 +52,10 @@ const RetoolingPage: React.FC = () => {
         experience,
         email,
         hearabout,
+        city: location.city,
+        country: location.country_name,
+        ip: location.ip,
+        time_zone: location.time_zone,
       };
       const res = await airTableApi.createUser(user);
       if (res.id) {
@@ -90,6 +116,23 @@ const RetoolingPage: React.FC = () => {
           console.log("FAILED...", err);
         }
       );
+  };
+
+  const getLocation = () => {
+    fetch("https://freegeoip.app/json/")
+      .then((res) => res.json())
+      .then((location) => {
+        setLocation(location);
+        console.log(location);
+      });
+  };
+
+  const validateForm = () => {
+    if (email.length === 0) setError(true);
+    if (firstname.length === 0) setError(true);
+    if (lastname.length === 0) setError(true);
+    if (phone.length === 0) setError(true);
+    setError(false);
   };
 
   useEffect(() => {
@@ -374,7 +417,9 @@ const RetoolingPage: React.FC = () => {
                 <div className="col-md-5">
                   <form className="row g-3 shadow-lg bg-white p-8 rounded-lg">
                     <div className="col-md-6">
-                      <label className="form-label">First Name</label>
+                      <label className="form-label">
+                        First Name <b style={{ color: "red" }}>*</b>
+                      </label>
                       <input
                         type="text"
                         className="form-control"
@@ -384,7 +429,9 @@ const RetoolingPage: React.FC = () => {
                       />
                     </div>
                     <div className="col-md-6">
-                      <label className="form-label">Last Name</label>
+                      <label className="form-label">
+                        Last Name <b style={{ color: "red" }}>*</b>
+                      </label>
                       <input
                         type="text"
                         className="form-control"
@@ -407,7 +454,9 @@ const RetoolingPage: React.FC = () => {
                       </select>
                     </div>
                     <div className="col-md-12">
-                      <label className="form-label">Email</label>
+                      <label className="form-label">
+                        Email <b style={{ color: "red" }}>*</b>
+                      </label>
                       <input
                         type="email"
                         className="form-control"
@@ -417,7 +466,9 @@ const RetoolingPage: React.FC = () => {
                       />
                     </div>
                     <div className="col-md-12">
-                      <label className="form-label">Phone Number</label>
+                      <label className="form-label">
+                        Phone Number <b style={{ color: "red" }}>*</b>
+                      </label>
                       <input
                         type="text"
                         className="form-control"
@@ -429,7 +480,8 @@ const RetoolingPage: React.FC = () => {
 
                     <div className="col-12">
                       <label className="form-label">
-                        Do you have previous coding experience
+                        Do you have previous coding experience{" "}
+                        <b style={{ color: "red" }}>*</b>
                       </label>
                       <select
                         id="inputState"
@@ -446,7 +498,8 @@ const RetoolingPage: React.FC = () => {
 
                     <div className="col-12">
                       <label className="form-label">
-                        How did you hear about this program? required
+                        How did you hear about this program? required{" "}
+                        <b style={{ color: "red" }}>*</b>
                       </label>
                       <select
                         className="form-select"
@@ -459,6 +512,12 @@ const RetoolingPage: React.FC = () => {
                         <option value="Friend">Friend</option>
                         <option value="While googling">While googling</option>
                       </select>
+                    </div>
+
+                    <div className="col-md-12 text-center">
+                      {error && (
+                        <p style={{ color: "red" }}>All fields are required</p>
+                      )}
                     </div>
 
                     <div className="col-12 flex justify-center items-center">
@@ -475,6 +534,7 @@ const RetoolingPage: React.FC = () => {
                         <button
                           type="submit"
                           className="btn btn-success btn-block"
+                          onMouseOver={(e) => validateForm()}
                           onClick={(e) => register(e)}
                         >
                           Register
