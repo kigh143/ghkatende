@@ -7,6 +7,8 @@ import { airTableApi } from "./airtable";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SEO from "../../components/SEO";
+import moment from "moment";
+import Footer from "../../components/Footer";
 
 const RetoolingPage: React.FC = () => {
   const [firstname, setFirstName] = useState("");
@@ -279,7 +281,7 @@ const RetoolingPage: React.FC = () => {
                     <p>
                       All the projects worked on by the students are promoted
                       since they are built based on solving existing problems.
-                      These projects attache investors.
+                      These projects attract investors.
                     </p>
                   </div>
                 </div>
@@ -292,8 +294,9 @@ const RetoolingPage: React.FC = () => {
                     <h3 className="h3">Career guidance.</h3>
                     <p>
                       Our learning process encompasses the software development
-                      life cycle which exposes the student’s strength and
-                      interests, these help us guide the student.
+                      life cycle which exposes the student to different domains
+                      of the software industry hence highlight students'
+                      strength and interests.
                     </p>
                   </div>
                 </div>
@@ -694,18 +697,7 @@ const RetoolingPage: React.FC = () => {
             </div>
           </div>
         </section>
-        <section className="projects" id="projects">
-          <div className="container">
-            <p>Active projects</p>
-            <h2 className="display-5 fw-bold">Students projects</h2>
-            <br />
-            <div className="row">
-              <div className="col-md-4"></div>
-              <div className="col-md-4"></div>
-              <div className="col-md-4"></div>
-            </div>
-          </div>
-        </section>
+        <Footer />
         <ToastContainer
           position="bottom-right"
           autoClose={false}

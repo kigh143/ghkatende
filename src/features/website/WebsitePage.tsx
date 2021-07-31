@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./website.css";
 import bg from "./images/bg.jpg";
 import { useAppSelector } from "../../app/hooks";
-import { Helmet } from "react-helmet";
 import { airTableApi } from "./airtable";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { HashLink as Link } from "react-router-hash-link";
 import SEO from "../../components/SEO";
+import Footer from "../../components/Footer";
 
 const WebsitePage: React.FC = () => {
   const projects = useAppSelector(
@@ -317,12 +317,11 @@ const WebsitePage: React.FC = () => {
                   >
                     <p>
                       I currently work as a remote Full stack engineer, Working
-                      on both website and Mobile application in different domain
-                      with Danapay and Ultiro.
+                      on both website and Mobile application in different
+                      domain.
                     </p>
                     <br />
                     <p>
-                      {" "}
                       <b>Always learning </b>
                     </p>
                     <p>
@@ -600,6 +599,7 @@ const WebsitePage: React.FC = () => {
             ))}
         </div>
       </div>
+      <Footer />
       <ToastContainer
         position="bottom-right"
         autoClose={false}
