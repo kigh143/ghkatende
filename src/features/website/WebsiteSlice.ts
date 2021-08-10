@@ -8,7 +8,7 @@ const initialState = {
       type: "contract",
       role: "Front End Dev",
       technologies: "React-Native, React, Nodejs, Firebase",
-      image: "./images/projects/addressya.jpg",
+      image: "./images/projects/addressya.png",
       description:
         "Addressya is solving one of the largest pains of businesses; finding, and being found, by their customers. We save valuable time, costs for the delivery, unnecessary refunds, ",
       link: "https://www.addressaya.com",
@@ -22,7 +22,7 @@ const initialState = {
       type: "contract",
       role: "Front End Dev",
       technologies: "React-Native, React, Firebase",
-      image: "./images/projects/ahindi.jpg",
+      image: "./images/projects/a.png",
       description:
         "A monitoring system for ensuring the safety and rights of externalized workers. It protects migrant workers worldwide by tracking. Migrant workers can regularly communicate updates",
       link: "https://www.ahindiapp.com",
@@ -36,7 +36,7 @@ const initialState = {
       type: "contract",
       role: "Front End Dev",
       technologies: "React-Native, React, Fastlane, CircleCi, Firebase FCM",
-      image: "./images/projects/danapay.jpg",
+      image: "./images/projects/danapay.png",
       description:
         "Danapay offers a blockchain based money transfer app that offers convenient remittance transactions at attractive rates. They specialize in wire transfers between Europe",
       link: "https://www.danapay.io",
@@ -50,7 +50,7 @@ const initialState = {
       type: "contract",
       role: "Front End Dev",
       technologies: "React native, React, Fastlane, CircleCi, Firebase FCM",
-      image: "./images/projects/pulidawo.jpg",
+      image: "./images/projects/p.png",
       description:
         "The PulidaWo App aims to narrow gap in legal aid delivery. Pulidawo operates on the framework of a two-sided marketplace for accessing Pro Bono legal aid/case across the country",
       link: "https://www.pulidawo.io",
@@ -68,7 +68,7 @@ const initialState = {
       description:
         "An offline digital wallet for all your bank cards. There is no need to carry your cards everywhere if you are not going to use them. Add them to Mi-Cards for easy access.",
       link: "https://play.google.com/store/apps/details?id=com.micards",
-      color: "#e9edc9",
+      color: "#fff",
       textColor: "#333",
       github: "https://github.com/kigh143",
     },

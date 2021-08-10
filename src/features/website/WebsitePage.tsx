@@ -156,7 +156,7 @@ const WebsitePage: React.FC = () => {
                       </a>
                     ))}
                 </div>
-                <h2 color="yellow">stuff</h2>
+                <h2 color="yellow"></h2>
               </div>
               <div className="col-lg-6">
                 <h3 className="display-6 fw-bold lh-1 mb-3">Hello, I am</h3>
@@ -562,7 +562,7 @@ const WebsitePage: React.FC = () => {
                     <div className="col-lg-6">
                       <img
                         src={project.image}
-                        className="projectImg shadow-md"
+                        className="projectImg"
                         alt={project.name}
                         loading="lazy"
                       />
