@@ -21,7 +21,10 @@ const Header: NextPage<any> = ({ title, description, keywords }) => {
           type="text/css"
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js" defer></Script>
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"
+          defer
+        ></Script>
       </Head>
       <section className="w-full px-8 text-gray-700 bg-white shadow-md border-b-1">
         <div className="container flex flex-col flex-wrap items-center justify-between py-2 mx-auto md:flex-row max-w-7xl ">
@@ -60,12 +63,13 @@ const Header: NextPage<any> = ({ title, description, keywords }) => {
               >
                 <span className="mx-2 cursor-pointer ">Retooling</span>
               </Link>
-              <Link
-                href="/blog"
+              <a
+                href="https://ghkatende.hashnode.dev/"
+                target={"_blank"}
                 className="cursor-pointer leading-6 text-gray-600 md:mr-6 hover:text-gray-900"
               >
                 <span className="mx-2 cursor-pointer ">Blog</span>
-              </Link>
+              </a>
             </nav>
             <div className="inline-flex items-center justify-center ml-5 space-x-4 md:space-x-10 md:justify-end">
               <a

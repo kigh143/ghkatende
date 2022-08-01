@@ -17,6 +17,7 @@ type Props = {
     role: string;
     type: string;
     category: string;
+    longDescription?: string;
   };
   index: number;
 };
@@ -79,7 +80,7 @@ const Project: NextPage<Props> = ({ project, index }) => {
       {showMore && (
         <div className="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16 pt-8">
           <h1>More</h1>
-          <p>{project.description}</p>
+          <p>{project?.longDescription}</p>
         </div>
       )}
     </section>

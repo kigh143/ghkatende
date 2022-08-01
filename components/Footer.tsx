@@ -48,12 +48,13 @@ const Footer: NextPage = () => {
               </Link>
             </li>
             <li className="relative mt-2 leading-7 text-left text-gray-900 border-0 border-gray-200 md:border-b-0 md:mt-0">
-              <Link
-                href="/blog"
+              <a
+                href="https://ghkatende.hashnode.dev/"
+                target={"_blank"}
                 className="box-border items-center block w-full px-4 text-base font-normal leading-normal text-gray-900 no-underline border-solid cursor-pointer hover:text-blue-600 focus-within:text-blue-700 sm:px-0 sm:text-left"
               >
                 Blog
-              </Link>
+              </a>
             </li>
           </ul>
           <div className="box-border right-0 flex justify-center w-full mt-4 space-x-3 border-solid md:w-auto md:justify-end md:absolute md:mt-0">
