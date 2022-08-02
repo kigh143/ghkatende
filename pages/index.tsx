@@ -129,13 +129,17 @@ const Home: NextPage = () => {
         <div className="container px-8 mx-auto sm:px-12 lg:px-20">
           <div className="flex grid items-center justify-center grid-cols-4 grid-cols-12 gap-y-8">
             {connect.map((item, index) => (
-              <div className="flex flex-col items-center justify-center col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-2">
+              <a
+                href={item.link}
+                target="_blank"
+                className="cursor-pointer flex flex-col items-center justify-center col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-2"
+              >
                 <i
                   className={`fa fa-${item.icon} text-4xl mb-2`}
-                  style={{ fontSize: 40, color: item.color }}
+                  style={{ fontSize: 25, color: item.color }}
                 ></i>
-                <p>{item.name}</p>
-              </div>
+                <small>{item.name}</small>
+              </a>
             ))}
           </div>
         </div>

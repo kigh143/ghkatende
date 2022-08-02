@@ -9,8 +9,8 @@ import styles from "../styles/Home.module.css";
 const projects = [
   {
     name: "Addressya",
-    period: "8 months",
-    type: "contract",
+    period: "Ended, 10 months",
+    type: "Full time ",
     role: "Front End Dev",
     technologies: "React-Native, React, Nodejs, Firebase",
     image: "/projects/addressya.png",
@@ -39,7 +39,8 @@ const projects = [
     github: "https://github.com/kigh143",
     isPersonal: true,
     category: "mobile",
-    description: "",
+    description:
+      "YoFare is changing the way we move by seamlessly making Urban and Rural travel more affordable and convenient. Just give your price and just by a tap of a button, travelers get to drivers through our app.",
   },
   {
     name: "Contaks",
