@@ -203,8 +203,8 @@ const Resume: NextPage = () => {
               <small className="text-gray-500 font-bold">
                 ghkatende@gmail.com
               </small>
-              <small className="text-gray-500">Kampala Uganda</small>
-              <small className="text-gray-500">Kampala, Uganda</small>
+              <small className="text-gray-500">Kampala</small>
+              <small className="text-gray-500">Uganda</small>
             </div>
           </div>
 
