@@ -12,21 +12,31 @@ const education = [
     name: "JavaScript Algorithms and Data structure.",
     school: "Free Code Camp",
     year: "March 2019  - present",
+    link: "https://www.freecodecamp.org/ghkatende1",
   },
   {
     name: "Web development in PHP, HTML, and CSS",
     school: "Fertile IT World",
     year: "Dec 2012  - May 2013",
+    link: "https://www.linkedin.com/in/fit-world-ltd-fertile-it-world-8ab93139/?originalSubdomain=ug",
   },
   {
     name: "Bachelors of Science in Software Engineering",
     school: "Makerere University",
     year: "Aug 2013 - Jan 2018",
+    link: "https://www.mak.ac.ug/",
   },
   {
     name: "Uganda Advanced Certificate of Education",
     school: "Ndejje Senior Secondary School",
     year: "Feb 2011 - Dec  2012",
+    link: "https://www.ndejjesss.ac.ug/",
+  },
+  {
+    name: "Uganda Certificate of Education",
+    school: "Seeta High School",
+    year: "Feb 2007 - Nov 2010",
+    link: "https://seetahigh.ac.ug/",
   },
 ];
 const Skills = [
@@ -154,7 +164,13 @@ const Resume: NextPage = () => {
 
   return (
     <>
-      <Header title={""} description={""} keywords={""} />
+      <Header
+        title={"Resume | Katende Hakim CV."}
+        description={summary}
+        keywords={
+          "Resume, Katende Hakim, React native, React js, Node js, personal projects, Software Engineer, Full Stack Developer, Front End Developer, Mobile Developer, Web Developer, Uganda, Kampala"
+        }
+      />
       <section className="bg-gray-100 pt-7 pb-7">
         <div className="container px-8 mx-auto sm:px-12 lg:px-20 flex flex-row justify-between items-center">
           <div>
@@ -165,7 +181,7 @@ const Resume: NextPage = () => {
             onClick={() => downLoad()}
             className="cursor-pointer text-blue-500 font-bold"
           >
-            Download CV
+            <small>Download Resume</small>
           </a>
         </div>
       </section>
@@ -233,7 +249,7 @@ const Resume: NextPage = () => {
             <h2 className="font-bold mb-2 text-gray-500">Work Experience</h2>
             <div className="py-4">
               {workExperience.map((work, index) => (
-                <div className="bg-white p-4 rounded-lg my-8 shadow-md">
+                <div className="bg-white p-4 rounded-lg my-8 border-2">
                   <div className="flex flex-row justify-between items-center">
                     <div className="mb-3">
                       <h3 className="text-xl my-2 font-bold">
@@ -271,7 +287,7 @@ const Resume: NextPage = () => {
             </h2>
             <div className="py-4">
               {education.map((edu, index) => (
-                <div className="bg-gray-50 p-4 border-md my-4">
+                <div className="bg-white p-4 rounded-md my-4 border-2">
                   <div className="flex flex-row justify-between items-center">
                     <div>
                       <h3 className="font-bold">{edu.name}</h3>
@@ -288,9 +304,9 @@ const Resume: NextPage = () => {
 
           <div className="py-6">
             <h2 className="font-bold mb-2 text-gray-500">Hobbies</h2>
-            <div className="flex flex-row flex-wrap p-4">
+            <div className="flex flex-row flex-wrap py-4">
               {hobbies.map((hobby, index) => (
-                <div className="bg-gray-50 p-4 border-md my-4 mx-4">
+                <div className="bg-white py-2 px-4 rounded-lg my-2 border-2 mr-4">
                   <small>{hobby}</small>
                 </div>
               ))}

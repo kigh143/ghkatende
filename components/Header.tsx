@@ -25,6 +25,24 @@ const Header: NextPage<any> = ({ title, description, keywords }) => {
           src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"
           defer
         ></Script>
+
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-Q6S0XDNSXC"
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-Q6S0XDNSXC");
+            `,
+          }}
+        />
       </Head>
       <section className="w-full px-8 text-gray-700 bg-white shadow-md border-b-1">
         <div className="container flex flex-col flex-wrap items-center justify-between py-2 mx-auto md:flex-row max-w-7xl ">

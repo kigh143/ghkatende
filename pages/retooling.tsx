@@ -8,7 +8,15 @@ import styles from "../styles/Home.module.css";
 const Retooling: NextPage = () => {
   return (
     <>
-      <Header title={""} description={""} keywords={""} />
+      <Header
+        title={"Retooling"}
+        description={
+          "Students learning how to code and solve real-world problems using a project-based learning paradigm."
+        }
+        keywords={
+          "Coding, Retooling, Project-based learning,Collaboration, Problem-solving,Critical Thinking,In-Depth Understanding, Project Management"
+        }
+      />
       <section className="relative bg-purple-900">
         <div className="absolute inset-0 flex justify-end w-full h-full overflow-hidden opacity-50">
           <img
@@ -34,7 +42,8 @@ const Retooling: NextPage = () => {
               problem-solving to youths.
             </p>
             <a
-              href="#_"
+              target={"_blank"}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd9NswXJmxHzO-9IIqGYfvbpKt8k6YyRSu60ByigmMalhSE7Q/viewform"
               className="inline-flex items-center justify-center w-full px-6 py-4 mb-3 mr-1 text-base font-semibold text-white no-underline align-middle bg-purple-600 border border-transparent border-solid rounded-md cursor-pointer select-none sm:max-w-xl sm:mb-0 lg:w-auto hover:bg-purple-500 hover:text-white focus-within:bg-blue-700 focus-within:border-blue-700"
             >
               <span>Join</span>
@@ -88,10 +97,7 @@ const Retooling: NextPage = () => {
         </div>
 
         <div className="w-full md:w-1/2">
-          <img
-            src="https://cdn.devdojo.com/images/november2020/tools-bg.jpeg?q=75&amp;auto=format"
-            className="inset-0 object-cover"
-          />
+          <img src="./retooling.jpg" className="inset-0 object-cover" />
         </div>
       </section>
 

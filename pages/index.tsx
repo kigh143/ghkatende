@@ -79,7 +79,13 @@ const connect = [
 const Home: NextPage = () => {
   return (
     <>
-      <Header title={""} description={""} keywords={""} />
+      <Header
+        title={"Hakim Katende's Website"}
+        description={
+          "Ugandan based experienced software developer who specializes in developing web applications and mobile apps."
+        }
+        keywords={"Uganda, Kampala, Software Developer, Full Stack Developer, React Native, React Js, Node Js, Firebase, MongoDb, ReduxToolkit, Mobile Developer, Web Developer"}
+      />
       <section className="bg-gray-100">
         <div className="flex flex-col-reverse items-center justify-center max-w-5xl px-10 pt-16 mx-auto md:flex-row md:space-x-20 lg:space-x-32 md:pt-24">
           <div className="box-content relative flex items-start justify-center flex-shrink-0 pb-16 border-2 border-b-0 border-green-500 w-80 rounded-t-3xl h-96">
@@ -99,7 +105,7 @@ const Home: NextPage = () => {
               I'm Katende Hakim
             </h2>
             <p className="text-lg text-gray-500">
-              I am an experienced software developer who specializes in
+              Ugandan based experienced software developer who specializes in
               developing web applications and mobile apps.
             </p>
             <a
@@ -168,11 +174,11 @@ const Home: NextPage = () => {
 
           <div className="flex flex-col w-full mt-8 space-y-5 md:w-1/2 md:space-y-10 md:mt-0">
             <p className="col-span-6 text-sm font-normal text-gray-100 lg:leading-8 xl:leading-8 md:text-xl">
-              I'm a mobile and web developer who's experienced and passionate in
-              the sector. As a result of my education and experience, I have
-              gained the knowledge and skills necessary to build scalable
-              software products. I enjoy every step of the software development
-              life cycle.
+              I'm a mobile and web developer based in uganda, with experience
+              and passion in the sector. As a result of my education and
+              experience, I have gained the knowledge and skills necessary to
+              build scalable software products. I enjoy every step of the
+              software development life cycle.
             </p>
 
             <p className="col-span-6 text-sm font-normal text-gray-100 lg:leading-8 xl:leading-8 md:text-xl">

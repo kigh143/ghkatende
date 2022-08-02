@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -20,7 +21,7 @@ const projects = [
     color: "#45a553",
     textColor: "#fff",
     github: "https://github.com/kigh143",
-    isPersonal: true,
+    isPersonal: false,
     category: "mobile",
     longDescription: "",
   },
@@ -72,7 +73,7 @@ const projects = [
     color: "#0c76fc",
     textColor: "#fff",
     github: "https://github.com/kigh143",
-    isPersonal: true,
+    isPersonal: false,
     category: "mobile",
     longDescription: "",
   },
@@ -81,7 +82,7 @@ const projects = [
     period: "present",
     type: "Full Time",
     role: "Front End Dev",
-    technologies: "React-Native, React, Fastlane, CircleCi, Firebase FCM",
+    technologies: "React-Native, React, FastLane, CircleCi, Firebase FCM",
     image: "/projects/danapay.png",
     description:
       "Danapay offers a blockchain based money transfer app that offers convenient remittance transactions at attractive rates. They specialize in wire transfers between Europe",
@@ -89,7 +90,7 @@ const projects = [
     color: "#2aa7b8",
     textColor: "#fff",
     github: "https://github.com/kigh143",
-    isPersonal: true,
+    isPersonal: false,
     category: "mobile",
     longDescription: "",
   },
@@ -108,6 +109,7 @@ const projects = [
     github: "https://github.com/kigh143",
     category: "mobile",
     longDescription: "",
+    isPersonal: false,
   },
   {
     name: "MiCards",
@@ -129,10 +131,69 @@ const projects = [
 ];
 
 const Projects: NextPage = () => {
+  const [selected, setSelected] = useState("all");
+  const [all_projects, setAllProjects] = useState(projects);
+
+  const change = (text: string) => {
+    setSelected(text);
+    if (text === "all") {
+      setAllProjects(projects);
+    } else {
+      const results =
+        text === "personal"
+          ? projects.filter((project) => project.isPersonal)
+          : projects.filter((project) => !project.isPersonal);
+      setAllProjects(results);
+    }
+  };
   return (
     <>
-      <Header title={""} description={""} keywords={""} />
-      {projects.map((item, index) => (
+      <Header
+        title={"Katende's case studies and Projects"}
+        description={
+          "Coding & Designing mobile and web apps, I currently work as a remote Full stack engineer, Working on both website and Mobile application in different domain."
+        }
+        keywords={
+          "React Native, Firebase, React js, Node js, MongoDb, ReduxToolkit, Mobile Developer, Web Developer, Uganda, Kampala"
+        }
+      />
+      <section className="bg-gray-100 pt-7 pb-7">
+        <div className="container px-8 mx-auto sm:px-12 lg:px-20 flex flex-row justify-between items-center">
+          <div>
+            <h2 className="font-bold">Projects and case studies</h2>
+            <small className="text-gray-500">
+              Coding & Designing mobile and web apps
+            </small>
+          </div>
+          <div>
+            <a
+              onClick={() => change("all")}
+              className={`cursor-pointer ${
+                selected === "all" ? "text-blue-500" : "text-gray-500 "
+              } font-bold mr-4`}
+            >
+              <small>All</small>
+            </a>
+            <a
+              onClick={() => change("work")}
+              className={`cursor-pointer ${
+                selected === "work" ? "text-blue-500" : "text-gray-500 "
+              } font-bold mr-4`}
+            >
+              <small>Work Related</small>
+            </a>
+            <a
+              onClick={() => change("personal")}
+              className={`cursor-pointer  ${
+                selected === "personal" ? "text-blue-500" : "text-gray-500 "
+              } font-bold`}
+            >
+              <small>Personal Projects</small>
+            </a>
+          </div>
+        </div>
+      </section>
+      {all_projects.map((item, index) => (
         <Project key={index} project={item} index={index} />
       ))}
       <Footer />
