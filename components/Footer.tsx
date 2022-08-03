@@ -20,7 +20,7 @@ const Footer: NextPage = () => {
                 href="/"
                 className="box-border items-center block w-full px-4 text-base font-normal leading-normal text-gray-900 no-underline border-solid cursor-pointer hover:text-blue-600 focus-within:text-blue-700 sm:px-0 sm:text-left"
               >
-                About
+                <small>About</small>
               </Link>
             </li>
             <li className="relative mt-2 leading-7 text-left text-gray-900 border-0 border-gray-200 md:border-b-0 md:mt-0">
@@ -28,7 +28,7 @@ const Footer: NextPage = () => {
                 href="/projects"
                 className="box-border items-center block w-full px-4 text-base font-normal leading-normal text-gray-900 no-underline border-solid cursor-pointer hover:text-blue-600 focus-within:text-blue-700 sm:px-0 sm:text-left"
               >
-                Case studies
+                <small>Case Studies</small>
               </Link>
             </li>
             <li className="relative mt-2 leading-7 text-left text-gray-900 border-0 border-gray-200 md:border-b-0 md:mt-0">
@@ -36,7 +36,7 @@ const Footer: NextPage = () => {
                 href="/resume"
                 className="box-border items-center block w-full px-4 text-base font-normal leading-normal text-gray-900 no-underline border-solid cursor-pointer hover:text-blue-600 focus-within:text-blue-700 sm:px-0 sm:text-left"
               >
-                Resume
+                <small>Resume</small>
               </Link>
             </li>
             <li className="relative mt-2 leading-7 text-left text-gray-900 border-0 border-gray-200 md:border-b-0 md:mt-0">
@@ -44,7 +44,7 @@ const Footer: NextPage = () => {
                 href="/retooling"
                 className="box-border items-center block w-full px-4 text-base font-normal leading-normal text-gray-900 no-underline border-solid cursor-pointer hover:text-blue-600 focus-within:text-blue-700 sm:px-0 sm:text-left"
               >
-                Retooling
+                <small>Retooling</small>
               </Link>
             </li>
             <li className="relative mt-2 leading-7 text-left text-gray-900 border-0 border-gray-200 md:border-b-0 md:mt-0">
@@ -53,7 +53,7 @@ const Footer: NextPage = () => {
                 target={"_blank"}
                 className="box-border items-center block w-full px-4 text-base font-normal leading-normal text-gray-900 no-underline border-solid cursor-pointer hover:text-blue-600 focus-within:text-blue-700 sm:px-0 sm:text-left"
               >
-                Blog
+                <small>Blog</small>
               </a>
             </li>
           </ul>
