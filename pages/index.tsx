@@ -84,7 +84,9 @@ const Home: NextPage = () => {
         description={
           "Ugandan based experienced software developer who specializes in developing web applications and mobile apps."
         }
-        keywords={"Uganda, Kampala, Software Developer, Full Stack Developer, React Native, React Js, Node Js, Firebase, MongoDb, ReduxToolkit, Mobile Developer, Web Developer"}
+        keywords={
+          "Uganda, Kampala, Software Developer, Full Stack Developer, React Native, React Js, Node Js, Firebase, MongoDb, ReduxToolkit, Mobile Developer, Web Developer"
+        }
       />
       <section className="bg-gray-100">
         <div className="flex flex-col-reverse items-center justify-center max-w-5xl px-10 pt-16 mx-auto md:flex-row md:space-x-20 lg:space-x-32 md:pt-24">
@@ -227,8 +229,8 @@ const Home: NextPage = () => {
             <div className="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
               <img
                 className="mx-auto sm:max-w-sm lg:max-w-full"
-                src="/services.png"
-                alt="feature image"
+                src="/thumb.jpeg"
+                alt="Coding & Designing mobile and web apps"
               />
             </div>
           </div>
