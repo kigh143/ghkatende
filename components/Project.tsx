@@ -5,19 +5,20 @@ import Link from "next/link";
 type Props = {
   project: {
     name: string;
-    isPersonal: boolean;
     description: string;
-    technologies: string;
-    github: string;
-    website: string;
     image: string;
-    color: string;
-    textColor: string;
+    link: string;
     period: string;
-    role: string;
     type: string;
+    technologies: string;
+    color: string;
+    github: string;
+    isPersonal: boolean;
+    role: string;
+    textColor: string;
     category: string;
-    longDescription?: string;
+    longDescription: string;
+    website: string;
   };
   index: number;
 };

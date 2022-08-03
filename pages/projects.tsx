@@ -6,8 +6,27 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Project from "../components/Project";
 import styles from "../styles/Home.module.css";
+import { type } from "os";
 
-const projects = [
+type ProjectType = {
+  name: string;
+  description: string;
+  image: string;
+  link: string;
+  period: string;
+  type: string;
+  technologies: string;
+  color: string;
+  github: string;
+  isPersonal: boolean;
+  role: string;
+  textColor: string;
+  category: string;
+  longDescription: string;
+  website: string;
+};
+
+const projects: ProjectType[] = [
   {
     name: "Addressya",
     period: "Ended, 10 months",
@@ -24,6 +43,7 @@ const projects = [
     isPersonal: false,
     category: "mobile",
     longDescription: "",
+    website: "https://www.addressaya.com",
   },
   {
     name: "Yofare",
@@ -42,6 +62,7 @@ const projects = [
     category: "mobile",
     description:
       "YoFare is changing the way we move by seamlessly making Urban and Rural travel more affordable and convenient. Just give your price and just by a tap of a button, travelers get to drivers through our app.",
+    website: "https://yofare.com/",
   },
   {
     name: "Contaks",
@@ -59,6 +80,7 @@ const projects = [
     isPersonal: true,
     category: "mobile",
     longDescription: "",
+    website: "https://contaks-356315.web.app/",
   },
   {
     name: "Ahindi",
@@ -76,6 +98,7 @@ const projects = [
     isPersonal: false,
     category: "mobile",
     longDescription: "",
+    website: "https://www.ahindiapp.com",
   },
   {
     name: "Danapay",
@@ -93,6 +116,7 @@ const projects = [
     isPersonal: false,
     category: "mobile",
     longDescription: "",
+    website: "https://www.danapay.io",
   },
   {
     name: "Pulida Wo",
@@ -110,6 +134,7 @@ const projects = [
     category: "mobile",
     longDescription: "",
     isPersonal: false,
+    website: "https://www.pulidawo.io",
   },
   {
     name: "MiCards",
@@ -127,6 +152,7 @@ const projects = [
     isPersonal: true,
     category: "mobile",
     longDescription: "",
+    website: "https://play.google.com/store/apps/details?id=com.micards",
   },
 ];
 
