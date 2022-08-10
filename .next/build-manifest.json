@@ -30,10 +30,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/projects": [
+    "/resume": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/projects.js"
+      "static/chunks/pages/resume.js"
+    ],
+    "/retooling": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/retooling.js"
     ]
   },
   "ampFirstPages": []

@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import LogRocket from 'logrocket';
 
 const experience = [
   "JavaScript",
@@ -75,6 +76,10 @@ const connect = [
     link: "https://www.facebook.com/ghkatende",
   },
 ];
+
+useEffect(() => {
+  LogRocket.init('aqa6tz/ghkatende');
+}, [])
 
 const Home: NextPage = () => {
   return (

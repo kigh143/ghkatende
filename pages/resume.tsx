@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ReactToPrint from "react-to-print";
 import { useReactToPrint } from "react-to-print";
+import LogRocket from "logrocket";
 
 const education = [
   {
@@ -157,10 +158,15 @@ const summary =
 
 const Resume: NextPage = () => {
   const componentRef = useRef(null);
+  const [registered, setRegistered] = useState(false);
 
   const downLoad = useReactToPrint({
     content: () => componentRef.current,
   });
+
+  useEffect(() => {
+    LogRocket.init("aqa6tz/ghkatende");
+  }, []);
 
   return (
     <>
@@ -189,13 +195,13 @@ const Resume: NextPage = () => {
       <section className="p-10 sm:p-4 md:p-20 lg:p-20 bg-gray-400">
         <div
           ref={componentRef}
-          className="container  px-8 mx-auto sm:px-12 lg:px-20 rounded-lg  flex flex-col justify-between bg-white"
+          className="container  px-8 mx-auto sm:px-8 lg:px-20 rounded-lg  flex flex-col justify-between bg-white"
         >
           <div className="flex flex-row justify-between items-center py-10 pt-20">
-            <div className="flex flex-row items-center">
+            <div className="flex flex-row items-center xs:flex-col md:flex-col sm:flex-col">
               <div>
                 <img
-                  src="/me.png"
+                  src="/hakim2.jpeg"
                   style={{
                     height: 100,
                     width: 100,
@@ -250,7 +256,7 @@ const Resume: NextPage = () => {
             <div className="py-4">
               {workExperience.map((work, index) => (
                 <div className="bg-white p-4 rounded-lg my-8 border-2">
-                  <div className="flex flex-row justify-between items-center">
+                  <div className="flex flex-row justify-between items-center sm:flex-col">
                     <div className="mb-3">
                       <h3 className="text-xl my-2 font-bold">
                         {work.job} ({work.type})
@@ -288,7 +294,7 @@ const Resume: NextPage = () => {
             <div className="py-4">
               {education.map((edu, index) => (
                 <div className="bg-white p-4 rounded-md my-4 border-2">
-                  <div className="flex flex-row justify-between items-center">
+                  <div className="flex flex-row justify-between items-center sm:flex-col">
                     <div>
                       <h3 className="font-bold">{edu.name}</h3>
                       <small>{edu.school}</small>

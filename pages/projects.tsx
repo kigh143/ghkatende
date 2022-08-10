@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Project from "../components/Project";
 import styles from "../styles/Home.module.css";
 import { type } from "os";
+import LogRocket from "logrocket";
 
 type ProjectType = {
   name: string;
@@ -172,6 +173,11 @@ const Projects: NextPage = () => {
       setAllProjects(results);
     }
   };
+
+  useEffect(() => {
+    LogRocket.init("aqa6tz/ghkatende");
+  }, []);
+
   return (
     <>
       <Header
