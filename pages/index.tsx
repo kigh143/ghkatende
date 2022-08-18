@@ -77,11 +77,13 @@ const connect = [
   },
 ];
 
-useEffect(() => {
-  LogRocket.init('aqa6tz/ghkatende');
-}, [])
+
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    LogRocket.init("aqa6tz/ghkatende");
+  }, []);
+
   return (
     <>
       <Header
