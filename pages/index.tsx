@@ -97,11 +97,11 @@ const Home: NextPage = () => {
       />
       <section className="bg-gray-100">
         <div className="flex flex-col-reverse items-center justify-center max-w-5xl px-10 pt-16 mx-auto md:flex-row md:space-x-20 lg:space-x-32 md:pt-24">
-          <div className="box-content relative flex items-start justify-center flex-shrink-0 pb-16 border-2 border-b-0 border-green-500 w-80 rounded-t-3xl h-96">
+          <div className="box-content relative flex items-start justify-center flex-shrink-0 pb-16 border-2 border-b-0 border-gray-900 w-80 rounded-t-3xl h-96">
             <div className="absolute z-20 h-8 mx-auto bg-white w-44 rounded-b-xl"></div>
             <div className="absolute w-full h-full p-3 pb-0">
               <div
-                className="box-content relative z-10 w-full h-full bg-green-400 rounded-t-xl"
+                className="box-content relative z-10 w-full h-full bg-gray-900 rounded-t-xl"
                 style={{
                   backgroundImage: "url('/hakim.png')",
                   backgroundPositionY: "center",
@@ -111,11 +111,11 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-col items-start w-full h-full max-w-xs pb-10 space-y-5 md:pb-0 md:max-w-none">
             <h2 className="text-5xl font-black text-gray-900">
-              I'm Katende Hakim
+              I'm G.Katende Hakim
             </h2>
             <p className="text-lg text-gray-500">
-              Ugandan based experienced software developer who specializes in
-              developing web applications and mobile apps.
+              Ugandan based experienced Full-Stack Front-End Heavy Developer who
+              specializes in developing web and mobile applications.
             </p>
             <a
               href="mailto:ghkatende@gmail.com"
@@ -211,24 +211,25 @@ const Home: NextPage = () => {
                 <ul>
                   <li className="flex items-center py-2 space-x-4 xl:py-3">
                     <span className="font-medium text-gray-500">
-                      Product (Mobile & Web App )Design
+                      Product Designer (Mobile & Web App )
+                    </span>
+                  </li>
+
+                  <li className="flex items-center py-2 space-x-4 xl:py-3">
+                    <span className="font-medium text-gray-500">
+                      Project Manager
                     </span>
                   </li>
                   <li className="flex items-center py-2 space-x-4 xl:py-3">
                     <span className="font-medium text-gray-500">
-                      UI and UX Design
+                      I.T Consultant & Support Engineer
                     </span>
                   </li>
                   <li className="flex items-center py-2 space-x-4 xl:py-3">
                     <span className="font-medium text-gray-500">
-                      Project Management
+                      Coding instructor for aspiring mobile application
+                      developers (from development to deployment)
                     </span>
-                  </li>
-                  <li className="flex items-center py-2 space-x-4 xl:py-3">
-                    <span className="font-medium text-gray-500">SEO</span>
-                  </li>
-                  <li className="flex items-center py-2 space-x-4 xl:py-3">
-                    <span className="font-medium text-gray-500"></span>
                   </li>
                 </ul>
               </div>
@@ -265,11 +266,11 @@ const Home: NextPage = () => {
               </svg>
             </p>
             <h2 className="text-4xl font-normal tracking-tight md:text-3xl md:leading-tight xl:text-4xl">
-              I'm Social, Let's connect
+              let's connect
             </h2>
             <p className="text-base font-medium text-gray-500 sm:text-sm xl:text-base">
-              E-mail at ghkatende @ gmail [.] com send a message through my
-              contact form [ the fastest way to connect me].
+              E-mail at ghkatende[@]gmail[.]com send a message through my email
+              address (the fastest way to connect me).
             </p>
           </div>
           <div className="flex w-full sm:w-auto xl:inline-flex">

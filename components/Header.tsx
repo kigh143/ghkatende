@@ -12,19 +12,12 @@ const Header: NextPage<any> = ({ title, description, keywords }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"
-        />
+
         <link
           rel="stylesheet"
           type="text/css"
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-        <Script
-          src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"
-          defer
-        ></Script>
 
         <script
           async

@@ -190,7 +190,7 @@ const Projects: NextPage = () => {
         }
       />
       <section className="bg-gray-100 pt-7 pb-7">
-        <div className="container px-8 mx-auto sm:px-12 lg:px-20 flex flex-row justify-between items-center">
+        <div className="container px-8 mx-auto sm:px-12 lg:px-20 flex xs:flex-col  md:flex-row flex-row justify-between items-center">
           <div>
             <h2 className="font-bold">Projects and case studies</h2>
             <small className="text-gray-500">

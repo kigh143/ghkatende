@@ -178,7 +178,7 @@ const Resume: NextPage = () => {
         }
       />
       <section className="bg-gray-100 pt-7 pb-7">
-        <div className="container px-8 mx-auto sm:px-12 lg:px-20 flex flex-row justify-between items-center">
+        <div className="container px-8 mx-auto sm:px-12 lg:px-20 flex flex-row md:flex-row xs:flex-col justify-between items-center ">
           <div>
             <h2>My Resume</h2>
             <small className="text-gray-500">Last Updated on Aug 12 2022</small>
@@ -192,13 +192,13 @@ const Resume: NextPage = () => {
         </div>
       </section>
 
-      <section className="p-10 sm:p-4 md:p-20 lg:p-20 bg-gray-400">
+      <section className="p-10 xs:p-2 sm:p-4 md:p-20 lg:p-20 bg-gray-400 ">
         <div
           ref={componentRef}
-          className="container  px-8 mx-auto sm:px-8 lg:px-20 rounded-lg  flex flex-col justify-between bg-white"
+          className="container  px-8 mx-auto xs:px-4 sm:px-8 lg:px-20 rounded-lg  flex flex-col justify-between bg-white"
         >
-          <div className="flex flex-row justify-between items-center py-10 pt-20">
-            <div className="flex flex-row items-center xs:flex-col md:flex-col sm:flex-col">
+          <div className="flex flex-row  md:flex-row xs:flex-col justify-between items-center py-10 pt-20">
+            <div className="flex flex-row items-center md:flex-row   xs:flex-col">
               <div>
                 <img
                   src="/hakim2.jpeg"
@@ -217,16 +217,15 @@ const Resume: NextPage = () => {
                   <p className="text-gray-500">
                     Full stack Front end heavy developer
                   </p>
-                  <small className="text-blue-300">Learning ...</small>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-end items-end">
-              <small className="text-gray-500 font-bold">
+            <div className="flex lg:flex-col lg:justify-end lg:items-end md:justify-center md:items-center xs:items-center xs:justify-center">
+              <small className="text-gray-500 font-bold mr-4">
                 ghkatende@gmail.com
               </small>
-              <small className="text-gray-500">Kampala</small>
-              <small className="text-gray-500">Uganda</small>
+              <small className="text-gray-500 mr-4">Kampala</small>
+              <small className="text-gray-500 mr-4">Uganda</small>
             </div>
           </div>
 
@@ -256,7 +255,7 @@ const Resume: NextPage = () => {
             <div className="py-4">
               {workExperience.map((work, index) => (
                 <div className="bg-white p-4 rounded-lg my-8 border-2">
-                  <div className="flex flex-row justify-between items-center sm:flex-col">
+                  <div className="flex flex-row justify-between items-center md:flex-row xs:flex-col">
                     <div className="mb-3">
                       <h3 className="text-xl my-2 font-bold">
                         {work.job} ({work.type})
@@ -294,7 +293,7 @@ const Resume: NextPage = () => {
             <div className="py-4">
               {education.map((edu, index) => (
                 <div className="bg-white p-4 rounded-md my-4 border-2">
-                  <div className="flex flex-row justify-between items-center sm:flex-col">
+                  <div className="flex flex-row justify-between items-center md:flex-row xs:flex-col">
                     <div>
                       <h3 className="font-bold">{edu.name}</h3>
                       <small>{edu.school}</small>
