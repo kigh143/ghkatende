@@ -18,12 +18,10 @@ const Header: NextPage<any> = ({ title, description, keywords }) => {
           type="text/css"
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-Q6S0XDNSXC"
         />
-
         <script
           dangerouslySetInnerHTML={{
             __html: `

@@ -77,8 +77,6 @@ const connect = [
   },
 ];
 
-
-
 const Home: NextPage = () => {
   useEffect(() => {
     LogRocket.init("aqa6tz/ghkatende");
